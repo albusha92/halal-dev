@@ -1,0 +1,1 @@
+export const HOST = `https://${process.env.REACT_APP_HOST}`;
