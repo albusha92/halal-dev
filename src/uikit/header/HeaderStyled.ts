@@ -3,43 +3,43 @@ import { device } from "../../config/screensSizes";
 import {
   HeaderPaddingStyled,
   ResponsiveHeaderFontSize,
+  ResponsivePadding,
 } from "../GeneralStyled";
 import { colors } from "./../../config/constants";
 
-export const HeaderContainer = styled.div`
-  /* @media ${device.tablet} {
-    font-size: 60px;
-  }
+export const HeaderContainer = styled.div``;
 
-  @media ${device.lap1024} {
-    font-size: 50px;
+export const FontSizeTopHeader = styled.div`
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  @media ${device.lap1280} {
+    font-size: 0.875rem;
+    gap: 1rem;
   }
-
-  @media ${device.lap1440} {
-    font-size: 60px;
-  }
-
-  @media ${device.lap1600} {
-    font-size: 60px;
-  } */
 `;
 
-export const TopHeaderContainer = styled(HeaderPaddingStyled)`
+export const TopHeaderWrapper = styled.div`
   background-color: ${colors.primary};
+  @media (max-width: 959px) {
+    display: none;
+  }
+`;
+
+export const TopHeaderContainer = styled(ResponsivePadding)`
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
 `;
 
-export const FreeShippingContainer = styled(ResponsiveHeaderFontSize)`
+export const FreeShippingContainer = styled(FontSizeTopHeader)`
   display: flex;
   align-items: center;
   color: white;
 `;
 
 export const RatingImage = styled.img`
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     width: 100px;
   }
 
@@ -62,18 +62,42 @@ export const TopHeaderMenuContainer = styled.div`
   gap: 1rem;
 `;
 
-export const MenuItem = styled(ResponsiveHeaderFontSize)`
+export const MenuItem = styled(FontSizeTopHeader)`
   display: flex;
   align-items: center;
   color: white;
 `;
 
 // Footer
-export const FooterHeaderContainer = styled(HeaderPaddingStyled)`
-  margin-top: 40px;
+export const FooterHeaderContainer = styled(ResponsivePadding)`
+  margin-top: 1rem;
   border-bottom: 1px solid #dddddd;
   display: flex;
   align-items: center;
+  padding-right: .5rem;
+  padding-left: .5rem;
+`;
+
+export const ArrowLeft = styled.div`
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: red;
+`;
+
+export const ArrowRight = styled.div`
+  position: absolute;
+  right: 0rem;
+  height: 100%;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: red;
 `;
 
 export const MenuIconContainer = styled.div`
@@ -86,7 +110,7 @@ export const MenuImage = styled.img`
   width: 40px;
   margin-right: 30px;
   cursor: pointer;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     width: 40px;
     margin-right: 30px;
   }
@@ -107,71 +131,75 @@ export const MenuImage = styled.img`
   }
 `;
 
-export const MenuFooterContainer = styled.div`
-  flex: 1;
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
-    color: #125c07;
+export const MenuFooterContainer = styled.ol`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* @media ${device.tablet960} { */
+  display: flex;
+  flex: 1 1 auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  -webkit-overflow-scrolling: touch;
+  /* } */
+  &::-webkit-scrollbar {
+    display: none;
   }
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
-    border: 3px solid #125c07;
-    transition: border-color 0.005s linear;
-  }
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    @media ${device.tablet} {
-      font-size: 18px;
-      padding: 0 20px;
-    }
+`;
 
-    @media ${device.lap1024} {
-      font-size: 12px;
-      padding: 0 15px;
-    }
+export const MenuWrapper = styled.div`
+  position: relative;
+  background-color: white;
+  /* @media ${device.tablet960} { */
+  display: flex;
+  flex: 1 1 auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  -webkit-overflow-scrolling: touch;
+  /* } */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
 
-    @media ${device.lap1440} {
-      font-size: 15px;
-      padding: 0 20px;
-    }
+interface MenuFooterItemProps {
+  chosen: boolean;
+}
 
-    @media ${device.lap1600} {
-      font-size: 18px;
-      padding: 0 20px;
-    }
+export const MenuFooterItem = styled.a<MenuFooterItemProps>`
+  margin: 0 2rem 0 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: ${(props) => (props.chosen ? colors.primary : colors.darkGrey)};
+  font-weight: bold;
+  white-space: nowrap;
+  border-bottom: 5px solid;
+  line-height: 0.5rem;
+  border-color: ${(props) => (props.chosen ? colors.primary : colors.white)};
+  transition: all 0.3s linear;
+  font-size: .85rem;
+  @media ${device.tablet768} {
+    font-size: 1rem;
   }
-  .ant-menu-item,
-  .ant-menu-submenu-title {
-    transition: all 0.1s !important;
+  &:hover {
+    border-color: ${colors.primary};
+    color: ${colors.primary};
   }
-  .ant-menu-item .ant-menu-item-icon + span,
-  .ant-menu-submenu-title .ant-menu-item-icon + span,
-  .ant-menu-item .anticon + span,
-  .ant-menu-submenu-title .anticon + span {
-    margin-left: 5px;
-    transition: border-color 0.005s linear;
-  }
+
 `;
 
 export const IconContainer = styled.div`
   display: inline-flex;
-  font-size: 20px !important;
-  /* color: red; */
+  margin-right: 0.2rem;
+  @media ${device.mobileS} {
+   font-size: 1rem;
+  }
+  @media ${device.tablet768} {
+   font-size: 1.5rem;
+  }
 `;
 
 export const RecentlyViewContainer = styled.div`

@@ -8,7 +8,7 @@ export interface TopMenuItem {
 
 export interface BodyMenuItemModel {
   name: string;
-  icon: string;
+  icon: object;
   link?: string;
 }
 

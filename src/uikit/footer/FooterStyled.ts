@@ -3,7 +3,7 @@ import { colors } from "../../config/constants";
 import { device } from "../../config/screensSizes";
 
 export const FooterContainer = styled.div`
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     padding: 4% 100px;
   }
 
@@ -27,7 +27,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterFontSize = styled.div`
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     font-size: 14px;
   }
 
@@ -94,7 +94,7 @@ export const PhoneNumber = styled.div`
   font-weight: bold;
   font-size: 22px;
   margin-left: 40px;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     font-size: 14px;
   }
 

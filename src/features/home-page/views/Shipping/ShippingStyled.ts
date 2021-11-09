@@ -13,43 +13,55 @@ export const ShippingContainer = styled.div`
 export const HeyMunChenText = styled.p`
   font-weight: bold;
   font-style: italic;
-  font-size: 96px;
   color: ${colors.primary};
-  -webkit-text-stroke-width: 4px;
   margin-bottom: 0;
-  @media ${device.tablet} {
-    font-size: 96px;
-	line-height: 96px;
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+    -webkit-text-stroke-width: 0.3px;
+  }
+  @media ${device.mobileL} {
+    font-size: 0.9rem;
+    -webkit-text-stroke-width: 0.3px;
+  }
+  @media ${device.tablet768} {
+    font-size: 2rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 2rem;
   }
 
   @media ${device.lap1024} {
-    font-size: 48px;
-	line-height: 52px;
+    font-size: 2.5rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 2.5rem;
   }
 
   @media ${device.lap1280} {
     font-size: 59px;
-	line-height: 63px;
+    line-height: 63px;
   }
 
   @media ${device.lap1366} {
-    font-size: 64px;
-	line-height: 68px;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 2.5rem;
   }
 
   @media ${device.lap1440} {
-    font-size: 61px;
-	line-height: 65px;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 3rem;
   }
 
   @media ${device.lap1600} {
-    font-size: 71px;
-	line-height: 75px;
+    font-size: 3.2rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 3.2rem;
   }
 
   @media ${device.lap1920} {
-    font-size: 92px;
-	line-height: 96px;
+    font-size: 3.6rem;
+    -webkit-text-stroke-width: 0.3px;
+    line-height: 3.2rem;
   }
 `;
 

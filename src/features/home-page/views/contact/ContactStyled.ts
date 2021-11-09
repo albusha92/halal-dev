@@ -3,7 +3,7 @@ import { colors } from "../../../../config/constants";
 import { device } from "../../../../config/screensSizes";
 
 export const ContactContainer = styled.div`
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     padding: 2% 100px;
   }
 
@@ -32,7 +32,7 @@ export const RegisterContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     gap: 50px;
   }
 
@@ -68,7 +68,7 @@ export const RegisterTextContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     font-size: 18px;
   }
 
@@ -101,7 +101,7 @@ export const IconContainer = styled.div`
   color: ${colors.white};
   font-size: 25px;
   display: inline-flex;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     font-size: 25px;
   }
 
@@ -146,7 +146,7 @@ export const RegisterButton = styled.div`
   padding: 0 20px;
   font-weight: bold;
   font-size: 18px;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     padding: 7px 20px;
   }
 
@@ -181,7 +181,7 @@ export const ContactArea = styled.div`
   gap: 60px;
   color: white;
   font-weight: bold;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     gap: 60px;
   }
 
@@ -216,7 +216,7 @@ export const PhoneContainer = styled.div`
   font-size: 18px;
   display: flex;
   align-items: center;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     gap: 20px;
     font-size: 18px;
   }
@@ -258,7 +258,7 @@ export const IconWrapper = styled.div`
   align-items: center;
   gap: 45px;
   color: white;
-  @media ${device.tablet} {
+  @media ${device.tablet768} {
     gap: 45px;
   }
 

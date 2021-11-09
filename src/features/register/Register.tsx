@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CheckboxContainer, NotifyButton, RegisterContainer, RegisterTitle } from './RegisterStyled';
+import { CheckboxContainer, InputContainer, NotifyButton, RegisterContainer, RegisterTitle } from './RegisterStyled';
 import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
 
 interface IRegisterProps {
@@ -21,49 +21,43 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 				autoComplete="off"
 			>
 				<Row justify="center" gutter={30}>
-					<Col span={5}>
+					<Col xs={24} md={5}>
 						<Form.Item
 							name="first_name"
 						>
-							<Input style={{
-								fontFamily: "Raleway",
-								fontSize: "18px",
-								padding: "5px 15px"
-							}} placeholder="First Name" />
+							<InputContainer>
+								<Input style={{
+								}} placeholder="First Name" />
+							</InputContainer>
 						</Form.Item>
 					</Col>
-					<Col span={5}>
+					<Col xs={24} md={5}>
 						<Form.Item
 							name="last_name"
 						>
-							<Input style={{
-								fontFamily: "Raleway",
-								fontSize: "18px",
-								padding: "5px 15px"
-							}} placeholder="Last Name" />
+							<InputContainer>
+								<Input style={{
+								}} placeholder="Last Name" />
+							</InputContainer>
 						</Form.Item>
 					</Col>
-					<Col span={5}>
+					<Col xs={24} md={5}>
 						<Form.Item
 							name="email"
 						>
-							<Input style={{
-								fontFamily: "Raleway",
-								fontSize: "18px",
-								padding: "5px 15px"
-							}} placeholder="Email Adddress" />
+							<InputContainer>
+								<Input style={{
+								}} placeholder="Email Adddress" />
+							</InputContainer>
+
 						</Form.Item>
 					</Col>
-					<Col span={5}>
-						<Form.Item
-							name="email"
-						>
+					<Col xs={24} md={5}>
+						<InputContainer>
 							<Input style={{
-								fontFamily: "Raleway",
-								fontSize: "18px",
-								padding: "5px 15px"
-							}} placeholder="Email Adddress" />
-						</Form.Item>
+							}} placeholder="" />
+						</InputContainer>
+
 					</Col>
 				</Row>
 				<CheckboxContainer>

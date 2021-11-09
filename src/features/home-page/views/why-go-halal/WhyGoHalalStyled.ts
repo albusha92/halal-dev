@@ -4,20 +4,29 @@ import { device } from "../../../../config/screensSizes";
 import { HeaderPaddingStyled } from "../../../../uikit/GeneralStyled";
 
 export const WhyContainer = styled(HeaderPaddingStyled)`
-  @media ${device.tablet} {
-    padding: 120px 0px 80px;
+  text-align: center;
+  @media ${device.mobileS} {
+    padding: 1rem 0.5rem;
+  }
+
+  @media ${device.mobileM} {
+    padding: 2rem 0.5rem;
+  }
+
+  @media ${device.tablet768} {
+    padding: 3rem 3rem;
   }
 
   @media ${device.lap1024} {
-    padding: 120px 80px 80px;
+    padding: 4rem 3rem;
   }
 
   @media ${device.lap1440} {
-    padding: 140px 100px 100px;
+    padding: 7rem 4rem 2rem;
   }
 
   @media ${device.lap1600} {
-    padding: 180px 135px 120px;
+    padding: 8rem 5rem 3rem;
   }
 `;
 
@@ -26,9 +35,15 @@ export const WhyTextConatiner = styled.div`
   font-family: "Neutraface 2 Display Titling";
   text-transform: uppercase;
   color: ${colors.primary};
-  @media ${device.tablet} {
-    font-size: 110px;
-    line-height: 148px;
+  @media ${device.mobileS} {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  @media ${device.tablet768} {
+    text-align: left;
+    font-size: 5rem;
+    line-height: 5rem;
   }
 
   @media ${device.lap1024} {
@@ -47,15 +62,16 @@ export const WhyTextConatiner = styled.div`
   }
 `;
 
-export const GoHalalText = styled.div`
-  font-weight: bold;
-
-  font-family: "Neutraface 2 Display Titling";
-  text-transform: uppercase;
+export const GoHalalText = styled(WhyTextConatiner)`
   color: ${colors.secondary};
-  @media ${device.tablet} {
-    font-size: 40px;
-    line-height: 190px;
+  @media ${device.mobileS} {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  @media ${device.tablet768} {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 5rem;
   }
 
   @media ${device.lap1024} {
@@ -77,13 +93,26 @@ export const GoHalalText = styled.div`
 export const RightWhyContainer = styled.div`
   display: inline-flex;
   flex-direction: column;
+  @media ${device.mobileS} {
+    margin-top: 0.5rem;
+  }
+  @media ${device.tablet768} {
+    margin: 0;
+    text-align: left;
+  }
 `;
 
 export const Description = styled.div`
   font-weight: 600;
   color: ${colors.black};
-  @media ${device.tablet} {
-    font-size: 24px;
+  @media ${device.mobileS} {
+    font-size: 0.6rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 0.7rem;
+  }
+  @media ${device.tablet768} {
+    font-size: .9rem;
   }
 
   @media ${device.lap1024} {
@@ -103,8 +132,14 @@ export const HightLightText = styled.span`
   font-size: 28px;
   font-weight: 800;
   color: ${colors.secondary};
-  @media ${device.tablet} {
-    font-size: 28px;
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 0.8rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1rem;
   }
 
   @media ${device.lap1024} {
@@ -121,15 +156,22 @@ export const HightLightText = styled.span`
 `;
 
 export const HightBackgroundText = styled.div`
-  font-size: 24px;
-  /* font-weight: bold; */
   display: inline-flex;
   align-items: center;
   color: ${colors.white};
   background-color: ${colors.secondary};
   padding: 0 5px;
-  @media ${device.tablet} {
-    font-size: 24px;
+  @media ${device.mobileS} {
+    font-size: 0.5rem;
+    margin-top: 0.7rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 0.6rem;
+    margin-top: 0.7rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
   }
 
   @media ${device.lap1024} {
@@ -151,6 +193,18 @@ export const HightBackgroundText = styled.div`
 
 export const BoldText = styled(HightLightText)`
   color: ${colors.white};
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  @media ${device.lap1024} {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
+  }
+  @media ${device.lap1440} {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.7rem;
+  }
 `;
 
 export const OutStoryBtn = styled.div`
@@ -159,11 +213,18 @@ export const OutStoryBtn = styled.div`
   font-size: 24px;
   color: ${colors.white};
   text-transform: capitalize;
+  cursor: pointer;
   background-color: ${colors.primary};
-
-  @media ${device.tablet} {
-    font-size: 24px;
-    padding: 13px 29px;
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    /* margin: 0 auto; */
+  }
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
   }
 
   @media ${device.lap1024} {

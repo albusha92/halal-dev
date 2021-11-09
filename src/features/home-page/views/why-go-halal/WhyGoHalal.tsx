@@ -9,7 +9,7 @@ const WhyGoHalal: React.FunctionComponent<IWhyGoHalalProps> = (props) => {
 	return (
 		<WhyContainer>
 			<Row>
-				<Col span={12}>
+				<Col xs={24} sm={12}>
 					<WhyTextConatiner>
 						WHY
 					</WhyTextConatiner>
@@ -17,7 +17,7 @@ const WhyGoHalal: React.FunctionComponent<IWhyGoHalalProps> = (props) => {
 						Go halal
 					</GoHalalText>
 				</Col>
-				<Col span={12}>
+				<Col xs={24} sm={12}>
 					<RightWhyContainer>
 						<Description>
 							Our decisions are guided by authentic halal for a <HightLightText>fresh, delicious, nutritious, and hygienic customer experience.</HightLightText> Everything we offer is packed with halal flavor full of joy for an authentic experience.

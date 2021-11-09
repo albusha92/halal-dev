@@ -17,7 +17,10 @@ export const FounderBackground = styled.div`
   height: 50%;
   top: 0;
   background-color: ${colors.secondary};
-  @media ${device.tablet} {
+  @media ${device.mobileS} {
+    height: 55%;
+  }
+  @media ${device.tablet768} {
     height: 50%;
   }
 
@@ -54,23 +57,40 @@ export const FounderText = styled.div`
   text-transform: uppercase;
   -webkit-text-stroke-width: 2px;
   margin-bottom: 80px;
-  @media ${device.tablet} {
-    font-size: 58px;
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+    -webkit-text-stroke-width: 0.1px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 0.9rem;
+    -webkit-text-stroke-width: 0.1px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1.7rem;
+    -webkit-text-stroke-width: 0.1px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
   }
 
   @media ${device.lap1024} {
-    font-size: 38px;
-	margin-bottom: 45px;
+	font-size: 2.2rem;
+    -webkit-text-stroke-width: 0.1px;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
   }
 
   @media ${device.lap1280} {
     font-size: 44px;
-	margin-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   @media ${device.lap1366} {
     font-size: 48px;
-	margin-bottom: 80px;
+    margin-bottom: 80px;
   }
 
   @media ${device.lap1440} {
@@ -82,6 +102,6 @@ export const FounderText = styled.div`
   }
 
   @media ${device.lap1920} {
-    font-size: 58px;
+    font-size: 55px;
   }
 `;

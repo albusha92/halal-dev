@@ -27,8 +27,8 @@ const HomePage = () => {
 			<Shipping />
 			<Register />
 			<MoreDetailHome />
-			<Contact />
-			<Footer />
+			{/* <Contact /> */}
+			{/* <Footer /> */}
 		</HomePageContainer>
 	);
 }
