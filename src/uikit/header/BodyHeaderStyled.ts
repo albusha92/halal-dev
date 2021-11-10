@@ -6,18 +6,27 @@ import { ResponsivePadding } from "../GeneralStyled";
 export const BodyHeaderWrapper = styled(ResponsivePadding)`
   display: flex;
   align-items: center;
-  padding: 1.5rem 0.5rem 0;
+
   flex-wrap: wrap;
   min-height: 120px;
   margin-bottom: 4px;
+  @media ${device.mobileS} {
+    padding: 0.5rem 0.5rem 0;
+  }
   @media ${device.tablet960} {
     align-items: flex-start;
+    padding: 1.5rem 0.5rem 0;
   }
 `;
 
 export const HeaderLogo = styled.a`
   flex: 0 0 auto;
   @media ${device.mobile767} {
+    margin-right: 0rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  @media ${device.tablet768} {
     margin-right: 0rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -44,12 +53,13 @@ export const SearchContainer = styled.div`
   order: 1;
   margin-top: 1rem;
   min-width: 17rem;
-  @media ${device.mobile767} {
-	flex-basis: 100%;
+  @media ${device.mobileS} {
+    flex-basis: 100%;
   }
   @media ${device.tablet960} {
     order: 0;
     margin-top: 0;
+	flex-basis: min-content;
   }
 `;
 
@@ -78,24 +88,23 @@ export const RegionContainer = styled.div`
   margin-top: 0.3rem;
   font-size: 0.75rem;
   @media ${device.mobileS} {
-	font-size: 0.45rem;
+    font-size: 0.45rem;
     font-weight: 600;
-	gap: 0.15rem;
+    gap: 0.15rem;
   }
   @media ${device.mobileM} {
-	font-size: 0.5rem;
+    font-size: 0.5rem;
     font-weight: 600;
-	gap: 0.2rem;
+    gap: 0.2rem;
   }
   @media ${device.mobileL} {
-	font-size: 0.6rem;
-    font-weight: 600;
-	gap: 0.2rem;
+    font-size: 0.6rem;
+    gap: 0.2rem;
   }
   @media ${device.tablet768} {
-	font-size: 0.7rem;
-    font-weight: 600;
-	gap: 0.3rem;
+    font-size: 0.6rem;
+    font-weight: 500;
+    gap: 0.2rem;
   }
 `;
 
@@ -103,11 +112,11 @@ export const RegionTitle = styled.span`
   font-size: 13px;
   font-weight: 600;
   @media ${device.mobileS} {
-	font-size: 0.45rem;
+    font-size: 0.45rem;
     font-weight: 600;
   }
   @media ${device.mobileM} {
-	font-size: 0.6rem;
+    font-size: 0.6rem;
     font-weight: 600;
   }
 `;
@@ -143,7 +152,7 @@ export const BodyMenuItem = styled.div`
   gap: 0.2rem;
   font-size: 0.75rem;
   margin-left: 1rem;
-  @media (max-width: 757px) {
+  @media (max-width: 959px) {
     & span {
       display: none !important;
     }
@@ -162,10 +171,57 @@ export const IconWrapper = styled.div`
   @media ${device.mobileS} {
     font-size: 1rem;
   }
+  @media ${device.mobileL} {
+    font-size: 1.5rem;
+  }
   @media ${device.lap1280} {
     font-size: 1.5rem;
   }
   &:hover {
     color: ${colors.primary};
+  }
+`;
+
+export const MenuIcon = styled.div`
+  & span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: ${colors.darkGrey};
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  & span:nth-child(1) {
+    top: 0px;
+  }
+  & span:nth-child(2) {
+    top: .4rem;
+  }
+  & span:nth-child(2) {
+    top: .4rem;
+  }
+  & span:nth-child(4) {
+    bottom: 0;
+  }
+`;
+
+export const IconMenuWrapper = styled.div`
+  position: relative;
+  width: 1.5rem;
+  height: 1rem;
+  margin-left: 1rem;
+  @media ${device.tablet960} {
+    display: none;
   }
 `;

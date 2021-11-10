@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { CheckboxContainer, InputContainer, NotifyButton, RegisterContainer, RegisterTitle } from './RegisterStyled';
 import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
+import SelectCountry from './SelectCountry';
 
 interface IRegisterProps {
 }
@@ -53,11 +54,7 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 						</Form.Item>
 					</Col>
 					<Col xs={24} md={5}>
-						<InputContainer>
-							<Input style={{
-							}} placeholder="" />
-						</InputContainer>
-
+						<SelectCountry />
 					</Col>
 				</Row>
 				<CheckboxContainer>

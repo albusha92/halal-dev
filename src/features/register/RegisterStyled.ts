@@ -104,3 +104,12 @@ export const InputContainer = styled.div`
     }
   }
 `;
+
+
+export const CountryContainer = styled.div`
+	& button{
+		padding: 0 .5rem;
+		background-color: white;
+		color: ${colors.black};
+	}
+`;

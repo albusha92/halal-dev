@@ -9,11 +9,8 @@ interface IComingSoonProps {
 }
 
 const ComingSoon: React.FunctionComponent<IComingSoonProps> = (props) => {
-	const lap1990 = useMediaQuery({ query: '(min-width: 1920px)' });
-	const lap1600 = useMediaQuery({ query: '(min-width: 1556px)' });
-	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
-	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
-
+	const [placehoder, setPlacehoder] = React.useState<string>("Email Adress");
+	
 	return (
 		<ComingSoonContainer>
 			<img src={image} width="100%" alt="" />
@@ -28,9 +25,9 @@ const ComingSoon: React.FunctionComponent<IComingSoonProps> = (props) => {
 					<InputContainer>
 						<InputWrapper>
 							<Input style={{
-							}} placeholder="Email Address" bordered={false} />
+							}} placeholder={placehoder} bordered={false} />
 						</InputWrapper>
-						<SubscribeNowBtn>
+						<SubscribeNowBtn onClick={() => setPlacehoder("Thank for your subscribe")}>
 							Subscribe now
 						</SubscribeNowBtn>
 					</InputContainer>

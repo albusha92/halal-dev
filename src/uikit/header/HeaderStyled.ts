@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../config/screensSizes";
-import {
-  HeaderPaddingStyled,
-  ResponsiveHeaderFontSize,
-  ResponsivePadding,
-} from "../GeneralStyled";
+import { ResponsivePadding } from "../GeneralStyled";
 import { colors } from "./../../config/constants";
 
 export const HeaderContainer = styled.div``;
@@ -67,15 +63,42 @@ export const MenuItem = styled(FontSizeTopHeader)`
   align-items: center;
   color: white;
 `;
+export const ContactContainer = styled.div`
+  & > div {
+    padding-bottom: 0;
+  }
+  & button {
+    border: none;
+    &::after {
+      display: none;
+    }
+    padding: 0;
+  }
+  .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+    display: none;
+  }
+  .ReactFlagsSelect-module_label__27pw9 {
+    color: white;
+  }
+  & ul {
+    margin: 0;
+    .ReactFlagsSelect-module_label__27pw9 {
+      color: black;
+    }
+  }
+`;
 
 // Footer
 export const FooterHeaderContainer = styled(ResponsivePadding)`
-  margin-top: 1rem;
-  border-bottom: 1px solid #dddddd;
-  display: flex;
-  align-items: center;
-  padding-right: .5rem;
-  padding-left: .5rem;
+  display: none;
+  @media ${device.tablet960} {
+    margin-top: 1rem;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 `;
 
 export const ArrowLeft = styled.div`
@@ -180,7 +203,7 @@ export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   line-height: 0.5rem;
   border-color: ${(props) => (props.chosen ? colors.primary : colors.white)};
   transition: all 0.3s linear;
-  font-size: .85rem;
+  font-size: 0.85rem;
   @media ${device.tablet768} {
     font-size: 1rem;
   }
@@ -188,17 +211,16 @@ export const MenuFooterItem = styled.a<MenuFooterItemProps>`
     border-color: ${colors.primary};
     color: ${colors.primary};
   }
-
 `;
 
 export const IconContainer = styled.div`
   display: inline-flex;
   margin-right: 0.2rem;
   @media ${device.mobileS} {
-   font-size: 1rem;
+    font-size: 1rem;
   }
   @media ${device.tablet768} {
-   font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 `;
 

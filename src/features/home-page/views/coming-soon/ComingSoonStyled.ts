@@ -32,7 +32,7 @@ export const ContentWrapper = styled.div`
   }
 
   @media ${device.lap1440} {
-    padding: 0 37% 8rem 7%;
+    padding: 0 34% 8rem 7%;
   }
 
   @media ${device.lap1600} {
@@ -120,6 +120,12 @@ export const BigTitle = styled.div`
   @media ${device.tablet768} {
     font-size: 2.2rem;
     line-height: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  @media ${device.tablet960} {
+    font-size: 3rem;
+    line-height: 3.8rem;
     letter-spacing: 2px;
   }
 
@@ -211,8 +217,15 @@ export const SendEmailContainer = styled.div`
   }
 
   @media ${device.tablet768} {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  @media ${device.tablet960} {
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     white-space: nowrap;
     margin-bottom: 1rem;
@@ -273,6 +286,12 @@ export const InputContainer = styled.div`
     flex-basis: 100%;
     justify-content: flex-end;
   }
+  @media ${device.tablet960} {
+    margin-top: 2rem;
+  }
+  @media ${device.lap1024} {
+    margin-top: 0rem;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -286,11 +305,11 @@ export const InputWrapper = styled.div`
     }
     @media ${device.tablet768} {
       font-size: 0.8rem;
-      width: 136px;
+      width: 180px;
     }
-    @media ${device.tablet768} {
-      font-size: 0.8rem;
-      width: 155px;
+    @media ${device.lap1440} {
+      font-size: 1rem;
+	  width: 213px;
     }
   }
 `;

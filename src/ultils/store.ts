@@ -5,9 +5,11 @@ import logger from "redux-logger";
 import { persistReducer, persistStore } from "redux-persist";
 import storageSession from "redux-persist/lib/storage/session";
 import thunk from "redux-thunk";
+import { mobileMenuReducer } from "../uikit/menuSlice";
 
 const rootReducer = combineReducers({
   home: homeReducer,
+  mobileMenu: mobileMenuReducer,
 });
 
 const persistedReducer = persistReducer(

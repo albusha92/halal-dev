@@ -4,9 +4,13 @@ import { device } from "../../config/screensSizes";
 import { ResponsivePadding } from "../GeneralStyled";
 
 export const FilterContainer = styled(ResponsivePadding)`
-  margin-top: 0.75rem;
+	display: none;
+  @media ${device.tablet960} {
+	  display: block;
+    margin-top: 0.75rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  }
 `;
 
 interface FilterItemProps {

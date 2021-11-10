@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useDispatch } from 'react-redux';
 import { BodyMenuItemModel } from '../../schema/general';
 import SvgAddress from '../icon-component/Address';
 import SvgCart from '../icon-component/Cart';
@@ -7,7 +8,8 @@ import SvgLike from '../icon-component/Like';
 import SvgRecipes from '../icon-component/Recipes';
 import SvgShoppingList from '../icon-component/ShoppingList';
 import SvgUser from '../icon-component/User';
-import { BodyMenuContainer, BodyMenuItem, IconWrapper } from './BodyHeaderStyled';
+import { toggle_menu } from '../menuSlice';
+import { BodyMenuContainer, BodyMenuItem, IconMenuWrapper, IconWrapper, MenuIcon } from './BodyHeaderStyled';
 
 interface IBodyHeaderMenuProps {
 }
@@ -51,7 +53,7 @@ const bodyMenuItems: BodyMenuItemModel[] = [
 ]
 
 const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) => {
-
+	const dispatch = useDispatch();
 	return (
 		<BodyMenuContainer>
 			{bodyMenuItems.map((item, idx) => {
@@ -64,6 +66,16 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 					</BodyMenuItem>
 				);
 			})}
+			<IconMenuWrapper>
+				<MenuIcon onClick={() => {
+					dispatch(toggle_menu());
+				}}>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</MenuIcon>
+			</IconMenuWrapper>
 		</BodyMenuContainer>
 	);
 };

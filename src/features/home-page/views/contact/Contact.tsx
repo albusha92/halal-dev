@@ -28,13 +28,16 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
 					Register for Updates
 				</RegisterTextContainer>
 				<InputContainer>
-					<Input style={{
-						width: lap1990 ? "300px" : lap1600 ? "260px" : lap1440 ? "240px" : lap1024 ? "200px" : "100px",
-						padding: lap1990 ? "10px 10px" : lap1600 ? "10px 10px" : lap1440 ? "7px 7px" : lap1024 ? "5px 5px" : "100px",
-					}} placeholder="Your E-mail Address..." />
-					<RegisterButton>
-						Register Now
-					</RegisterButton>
+					<InputWrapper>
+						<Input style={{
+
+						}} placeholder="Your E-mail Address..." />
+					</InputWrapper>
+					<div>
+						<RegisterButton>
+							Register Now
+						</RegisterButton>
+					</div>
 				</InputContainer>
 			</RegisterContainer>
 			<ContactArea>
