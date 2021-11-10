@@ -3,6 +3,7 @@ import BodyHeader from './BodyHeader';
 import FooterHeader from './FooterHeader';
 import HeaderProductFilter from './HeaderProductFilter';
 import { HeaderContainer } from './HeaderStyled';
+import MobileMenu from './MobileMenu';
 import TopHeader from './TopHeader';
 
 interface IHeaderProps {
@@ -11,6 +12,7 @@ interface IHeaderProps {
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
 	return (
 		<HeaderContainer>
+			<MobileMenu />
 			<TopHeader />
 			<BodyHeader />
 			<FooterHeader />

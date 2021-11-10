@@ -15,12 +15,16 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media ${device.tablet} {
-    padding: 0 37% 8% 100px;
+  @media ${device.mobileS} {
+    padding: 0 0.5rem 1.2rem;
+  }
+  @media ${device.tablet768} {
+    padding: 0 25% 4rem 3rem;
+    /* padding-right: 37%; */
   }
 
   @media ${device.lap1024} {
-    padding: 0 37% 7% 25px;
+    padding: 0 30% 5rem 4.5rem;
   }
 
   @media ${device.lap1280} {
@@ -28,7 +32,7 @@ export const ContentWrapper = styled.div`
   }
 
   @media ${device.lap1440} {
-    padding: 0 37% 8% 100px;
+    padding: 0 34% 8rem 7%;
   }
 
   @media ${device.lap1600} {
@@ -44,8 +48,14 @@ export const LogoWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  @media ${device.tablet} {
-    bottom: -75px;
+  @media ${device.mobileS} {
+    bottom: -15px;
+  }
+  @media ${device.mobileM} {
+    bottom: -1.5rem;
+  }
+  @media ${device.tablet768} {
+    bottom: -35px;
   }
 
   @media ${device.lap1024} {
@@ -62,8 +72,15 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoTrustImage = styled.img`
-  @media ${device.tablet} {
-    width: 100px;
+  @media ${device.mobileS} {
+    width: 30px;
+  }
+  @media ${device.mobileM} {
+    width: 3rem;
+  }
+
+  @media ${device.tablet768} {
+    width: 70px;
   }
 
   @media ${device.lap1024} {
@@ -80,20 +97,43 @@ export const LogoTrustImage = styled.img`
 `;
 
 export const BigTitle = styled.div`
-  -webkit-text-stroke-color: #fff;
   letter-spacing: 5px;
   color: ${colors.white};
   font-weight: 800;
+  white-space: nowrap;
+  @media ${device.mobileS} {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: 2px;
+  }
+  @media ${device.mobileM} {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+  }
+  @media ${device.mobileL} {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+  }
   /* text-transform: uppercase; */
-  @media ${device.tablet} {
-    font-size: 80px;
-    line-height: 85px;
+  @media ${device.tablet768} {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  @media ${device.tablet960} {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    letter-spacing: 2px;
   }
 
   @media ${device.lap1024} {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 2.8rem;
+    line-height: 4rem;
     -webkit-text-stroke-width: 2px;
+    letter-spacing: 4px;
   }
 
   @media ${device.lap1280} {
@@ -103,9 +143,9 @@ export const BigTitle = styled.div`
   }
 
   @media ${device.lap1440} {
-    font-size: 53px;
-    line-height: 65px;
-    -webkit-text-stroke-width: 3px;
+    font-size: 4rem;
+    line-height: 6rem;
+    -webkit-text-stroke-width: 2px;
   }
 
   @media ${device.lap1600} {
@@ -119,11 +159,33 @@ export const BigTitle = styled.div`
 `;
 
 export const Subtitle = styled.div`
-  font-weight: 600;
   color: white;
-  @media ${device.tablet} {
-    font-size: 24px;
-    margin-top: 20px;
+  @media ${device.mobileS} {
+    font-size: 0.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    width: 70%;
+    font-weight: 400;
+  }
+  @media ${device.mobileS} {
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    width: 70%;
+    font-weight: 400;
+  }
+  @media ${device.mobileL} {
+    font-size: 0.6rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    width: 70%;
+  }
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    width: 100%;
+    font-weight: 600;
   }
 
   @media ${device.lap1024} {
@@ -149,6 +211,32 @@ export const SendEmailContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media ${device.mobile767} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media ${device.tablet768} {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  @media ${device.tablet960} {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  @media ${device.lap1024} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const SubscribeNowBtn = styled.div`
@@ -157,10 +245,19 @@ export const SubscribeNowBtn = styled.div`
   color: white;
   padding-left: 15px;
   display: flex;
+  height: 100%;
   align-items: center;
-  @media ${device.tablet} {
-    font-size: 24px;
-    width: 230px;
+  cursor: pointer;
+  @media ${device.mobileS} {
+    flex: 1;
+    font-size: 0.5rem;
+    padding: 0 1rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 0.9rem;
+    flex: initial;
+    display: inline-flex;
+    padding: 0.2rem 1rem;
   }
 
   @media ${device.lap1024} {
@@ -182,4 +279,37 @@ export const SubscribeNowBtn = styled.div`
 export const InputContainer = styled.div`
   display: flex;
   padding-top: 5px;
+  @media ${device.mobileS} {
+    flex-basis: 100%;
+  }
+  @media ${device.tablet768} {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+  @media ${device.tablet960} {
+    margin-top: 2rem;
+  }
+  @media ${device.lap1024} {
+    margin-top: 0rem;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: inline-flex;
+  .ant-input {
+    background-color: white;
+    font-size: 0.5rem;
+    border-radius: 0;
+    @media ${device.mobileS} {
+      font-size: 0.5rem;
+    }
+    @media ${device.tablet768} {
+      font-size: 0.8rem;
+      width: 180px;
+    }
+    @media ${device.lap1440} {
+      font-size: 1rem;
+	  width: 213px;
+    }
+  }
 `;

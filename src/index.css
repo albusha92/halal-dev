@@ -1,9 +1,12 @@
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif !important;
-  font-size: 12px !important;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #4444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFAFA;
 }
 
 @font-face {

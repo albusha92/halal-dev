@@ -14,6 +14,7 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 	const lap1600 = useMediaQuery({ query: '(min-width: 1556px)' });
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
 	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
+	const tablet768 = useMediaQuery({ query: '(min-width: 768px)' });
 
 	return (
 		<FounderContainer>
@@ -21,14 +22,14 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 			<FounderText>
 				meet our founders
 			</FounderText>
-			<Row justify="center" gutter={lap1990 ? 160 : lap1600 ? 160 : lap1440 ? 140 : lap1024 ? 100 : 6}>
-				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 5}>
+			<Row justify="center" gutter={lap1990 ? 160 : lap1600 ? 160 : lap1440 ? 140 : lap1024 ? 100 : tablet768 ? 60 : 20}>
+				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
 					<img src={founder1} alt="" width="100%" />
 				</Col>
-				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 5}>
+				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
 					<img src={founder2} alt="" width="100%" />
 				</Col>
-				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 5}>
+				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
 					<img src={founder3} alt="" width="100%" />
 				</Col>
 			</Row>

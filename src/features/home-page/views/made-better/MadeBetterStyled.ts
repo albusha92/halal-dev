@@ -3,24 +3,24 @@ import { colors } from "../../../../config/constants";
 import { device } from "../../../../config/screensSizes";
 
 export const MadeBetterContainer = styled.div`
-  @media ${device.tablet} {
-    padding: 5% 100px;
+  @media ${device.mobileS} {
+    padding: 1rem 0.5rem;
+  }
+
+  @media ${device.tablet768} {
+    padding: 1rem 4rem;
   }
 
   @media ${device.lap1024} {
-    padding: 8% 25px;
+    padding: 1rem 5rem;
   }
 
-  /* @media ${device.lap1366} {
-    padding: 8% 75px;
-  } */
-
   @media ${device.lap1440} {
-    padding: 8% 100px;
+    padding: 1rem 4rem;
   }
 
   @media ${device.lap1600} {
-    padding: 8% 135px;
+    padding: 0rem 9rem;
   }
 `;
 
@@ -36,17 +36,23 @@ export const PrimaryText = styled.div`
   font-family: "Neutraface 2 Display Titling";
   text-transform: uppercase;
   color: ${colors.primary};
-  font-size: 58px;
-  line-height: 65px;
   font-weight: bold;
-  @media ${device.tablet} {
-    font-size: 58px;
-    line-height: 65px;
+  @media ${device.mobileS} {
+    font-size: 1rem;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 1.3rem;
+  }
+
+  @media ${device.tablet768} {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
   @media ${device.lap1024} {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 
   @media ${device.lap1280} {
@@ -81,12 +87,20 @@ export const SecondaryText = styled.div`
   color: ${colors.secondary};
   font-size: 80px;
   font-weight: bold;
-  @media ${device.tablet} {
-    font-size: 80px;
+  @media ${device.mobileS} {
+    font-size: 1.2rem;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 1.3rem;
+  }
+  
+  @media ${device.tablet768} {
+    font-size: 1.7rem;
   }
 
   @media ${device.lap1024} {
-    font-size: 64px;
+    font-size: 3.5rem;
   }
 
   @media ${device.lap1280} {

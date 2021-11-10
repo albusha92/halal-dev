@@ -11,6 +11,7 @@ import Shipping from '../views/Shipping/Shipping';
 import WhyGoHalal from '../views/why-go-halal/WhyGoHalal';
 import { HomePageContainer } from './HomPageStyled';
 import Footer from '../../../uikit/footer/Footer';
+import PaymentFooter from '../views/payment-footer/PaymentFooter';
 
 export interface IAppProps {
 }
@@ -29,6 +30,7 @@ const HomePage = () => {
 			<MoreDetailHome />
 			<Contact />
 			<Footer />
+			<PaymentFooter />
 		</HomePageContainer>
 	);
 }

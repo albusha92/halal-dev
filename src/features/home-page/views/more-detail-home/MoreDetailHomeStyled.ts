@@ -5,9 +5,12 @@ import { device } from "../../../../config/screensSizes";
 export const MoreDetailHomeContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  @media ${device.tablet} {
-    padding: 5% 100px;
+  align-items: stretch;
+  @media ${device.mobileS} {
+    padding: 1rem .5rem;
+  }
+  @media ${device.tablet768} {
+    padding: 1rem .5rem;
   }
 
   @media ${device.lap1024} {
@@ -37,12 +40,13 @@ export const DetailItemContainer = styled.div`
 
 export const IconContainer = styled.span`
   color: ${colors.primary};
-  font-size: 40px;
   margin-bottom: 10px;
   display: inline-flex;
-  @media ${device.tablet} {
-    font-size: 40px;
-    margin-bottom: 10px;
+  @media ${device.mobileS} {
+    font-size: 1rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1.5rem;
   }
 
   @media ${device.lap1024} {
@@ -78,8 +82,11 @@ export const IconContainer = styled.span`
 export const Title = styled.div`
   color: ${colors.primary};
   font-weight: bold;
-  @media ${device.tablet} {
-    font-size: 18px;
+  @media ${device.mobileS} {
+    font-size: 0.5rem;
+  }
+  @media ${device.tablet768} {
+    font-size: .7rem;
   }
 
   @media ${device.lap1024} {
@@ -110,8 +117,8 @@ export const Title = styled.div`
 export const SubTitle = styled.div`
   color: ${colors.black};
   font-size: 14px;
-  @media ${device.tablet} {
-    font-size: 14px;
+  @media ${device.tablet768} {
+    font-size: .6rem;
   }
 
   @media ${device.lap1024} {

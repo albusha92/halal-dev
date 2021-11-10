@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import SvgComment from '../../../../icon-component/Comment';
 import SvgRepeat from '../../../../icon-component/Repeat';
 import SvgRocket from '../../../../icon-component/Rocket';
@@ -38,6 +39,8 @@ const moreDetails = [
 ]
 
 const MoreDetailHome: React.FunctionComponent<IMoreDetailHomeProps> = (props) => {
+
+	const mobile = useMediaQuery({ query: '(max-width: 767px)' });
 	return (
 		<MoreDetailHomeContainer>
 			{moreDetails.map((item, index) => {
@@ -50,9 +53,9 @@ const MoreDetailHome: React.FunctionComponent<IMoreDetailHomeProps> = (props) =>
 						<Title>
 							{item.name}
 						</Title>
-						<SubTitle>
+						{!mobile && <SubTitle>
 							{item.description}
-						</SubTitle>
+						</SubTitle>}
 					</DetailItemContainer>
 				)
 			})}

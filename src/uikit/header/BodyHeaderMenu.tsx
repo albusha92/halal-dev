@@ -1,72 +1,81 @@
 import * as React from 'react';
-import SVGIcon from '../SVGIcon/SVGIcon';
-import { BodyMenuContainer, BodyMenuItem } from './BodyHeaderStyled';
-import like from '../../assets/svg-icon/like.svg';
-import map from '../../assets/svg-icon/address.svg';
-import recipes from '../../assets/svg-icon/recipes.svg';
-import shoppingList from '../../assets/svg-icon/shopping-list.svg';
-import heart from '../../assets/svg-icon/heart.svg';
-import cart from '../../assets/svg-icon/cart.svg';
-import userBlack from '../../assets/svg-icon/user-black.svg';
+import { useDispatch } from 'react-redux';
 import { BodyMenuItemModel } from '../../schema/general';
-import { useMediaQuery } from 'react-responsive';
+import SvgAddress from '../icon-component/Address';
+import SvgCart from '../icon-component/Cart';
+import SvgHeart from '../icon-component/Heart';
+import SvgLike from '../icon-component/Like';
+import SvgRecipes from '../icon-component/Recipes';
+import SvgShoppingList from '../icon-component/ShoppingList';
+import SvgUser from '../icon-component/User';
+import { toggle_menu } from '../menuSlice';
+import { BodyMenuContainer, BodyMenuItem, IconMenuWrapper, IconWrapper, MenuIcon } from './BodyHeaderStyled';
 
 interface IBodyHeaderMenuProps {
 }
 
 const bodyMenuItems: BodyMenuItemModel[] = [
 	{
-		icon: like,
+		icon: <SvgLike />,
 		name: "Follow Us",
 		link: ""
 	},
 	{
-		icon: map,
+		icon: <SvgAddress />,
 		name: "Delivery Address",
 		link: ""
 	},
 	{
-		icon: recipes,
+		icon: <SvgRecipes />,
 		name: "My Recipies",
 		link: ""
 	},
 	{
-		icon: shoppingList,
+		icon: <SvgShoppingList />,
 		name: "Shopping List",
 		link: ""
 	},
 	{
-		icon: heart,
+		icon: <SvgHeart />,
 		name: "Favorite",
 		link: ""
 	},
 	{
-		icon: cart,
+		icon: <SvgCart />,
 		name: "Cart",
 		link: ""
 	},
 	{
-		icon: userBlack,
+		icon: <SvgUser />,
 		name: "Accout",
 		link: ""
 	},
 ]
 
 const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) => {
-	const lap1600 = useMediaQuery({ query: '(min-width: 1556px)' });
-	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
-	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
-
+	const dispatch = useDispatch();
 	return (
 		<BodyMenuContainer>
 			{bodyMenuItems.map((item, idx) => {
 				return (
 					<BodyMenuItem key={idx}>
-						<SVGIcon src={item.icon} size={lap1600 ? 30 : lap1440 ? 23 : lap1024 ? 22 : 18} />
+						<IconWrapper>
+							{item.icon}
+						</IconWrapper>
 						<span>{item.name}</span>
 					</BodyMenuItem>
 				);
 			})}
+			<IconMenuWrapper>
+				<MenuIcon onClick={() => {
+					dispatch(toggle_menu());
+				}}>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</MenuIcon>
+			</IconMenuWrapper>
 		</BodyMenuContainer>
 	);
 };

@@ -3,3 +3,7 @@ export interface BaseState {
   success?: boolean;
   error?: string | null;
 }
+
+export interface MobileMenuState {
+	show: boolean;
+}
