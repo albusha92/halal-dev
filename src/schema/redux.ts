@@ -7,3 +7,7 @@ export interface BaseState {
 export interface MobileMenuState {
 	show: boolean;
 }
+
+export interface HomeState{
+	language: string,
+}

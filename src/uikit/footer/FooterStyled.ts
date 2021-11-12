@@ -121,8 +121,17 @@ export const ContactContainer = styled.div`
       display: none;
     }
   }
-  .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after{
-	  display: none;
+  & .ant-select-selector {
+    padding: 0 !important;
+  }
+  & .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  & .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+    display: none;
   }
   & ul {
     margin: 0;

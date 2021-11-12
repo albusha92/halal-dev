@@ -62,7 +62,25 @@ export const MenuItem = styled(FontSizeTopHeader)`
   display: flex;
   align-items: center;
   color: white;
+  & .ant-select-selector{
+	  padding: 0 !important;
+  }
+  & .ant-select-selection-item{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  gap: .5rem;
+  }
 `;
+
+export const LanguageContainer = styled.div`
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	gap: .6rem;
+	justify-content: space-between;
+`;
+
 export const ContactContainer = styled.div`
   & > div {
     padding-bottom: 0;
