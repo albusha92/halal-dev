@@ -1,0 +1,6 @@
+.ant-select-item-option-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5rem;
+}
