@@ -56,6 +56,7 @@ export const FilterIconContainer = styled.div`
 
 export const LiItem = styled.li`
   position: relative;
+  cursor: pointer;
   &::after {
     content: "";
     right: 0;
