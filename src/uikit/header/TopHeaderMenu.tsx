@@ -72,8 +72,6 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 	const lap1600 = useMediaQuery({ query: '(min-width: 1556px)' });
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
 	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
-	const [selected, setSelected] = React.useState<string>("DE");
-	const onSelect = (code: string): void => setSelected(code);
 	const dispatch = useDispatch();
 	// const [language, setLanguage] = React.useState<string>('de');
 	const {language} = useSelector((state: RootState) => state.home);
@@ -101,7 +99,7 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 						padding: 0,
 						display: 'flex',
 						alignItems: "center",
-						justifyContent: "center"
+						justifyContent: "flex-start"
 					}} 
 					bordered={false}
 					onChange={(value) => {

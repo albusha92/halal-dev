@@ -68,7 +68,7 @@ export const MenuItem = styled(FontSizeTopHeader)`
   & .ant-select-selection-item{
 	  display: flex;
 	  align-items: center;
-	  justify-content: center;
+	  justify-content: flex-start;
 	  gap: .5rem;
   }
 `;
