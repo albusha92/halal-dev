@@ -21,6 +21,7 @@ import './TopHeaderMenu.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../ultils/store';
 import { update_language } from '../../features/home-page/slices/homeSlice';
+import SvgArabicFlag from '../icon-component/ArabicFlag';
 const { Option } = Select;
 
 interface ITopHeaderMenuProps {
@@ -59,7 +60,12 @@ export const languages = [
 		name: "English",
 		value: 'en',
 		icon: <SvgUkFlag fontSize={20} />,
-	}
+	},
+	{
+		name: "Arabic",
+		value: 'ar',
+		icon: <SvgArabicFlag fontSize={20} />,
+	},
 ]
 
 const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
