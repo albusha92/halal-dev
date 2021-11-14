@@ -16,7 +16,6 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
 			<TopHeader />
 			<BodyHeader />
 			<FooterHeader />
-			<HeaderProductFilter />
 		</HeaderContainer>
 	);
 };

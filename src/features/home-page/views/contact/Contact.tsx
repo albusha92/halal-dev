@@ -14,10 +14,6 @@ interface IContactProps {
 }
 
 const Contact: React.FunctionComponent<IContactProps> = (props) => {
-	const lap1990 = useMediaQuery({ query: '(min-width: 1920px)' });
-	const lap1600 = useMediaQuery({ query: '(min-width: 1556px)' });
-	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
-	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
 	return (
 		<ContactContainer>
 			<RegisterContainer>

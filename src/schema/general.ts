@@ -3,7 +3,7 @@ export type UserRole = "super-admin" | "admin" | "operator";
 export interface TopMenuItem {
   name: string;
   icon: string;
-  link?: string;
+  link: string;
 }
 
 export interface BodyMenuItemModel {

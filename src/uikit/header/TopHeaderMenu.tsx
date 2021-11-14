@@ -1,27 +1,24 @@
+import { Select } from 'antd';
 import * as React from 'react';
-import user from '../../assets/svg-icon/user.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { useMediaQuery } from 'react-responsive';
+import { useHistory } from 'react-router';
 import message from '../../assets/svg-icon/message.svg';
 import suitcase from '../../assets/svg-icon/suitcase.svg';
-import germanyFlag from '../../assets/header/germany-flag.png';
+import user from '../../assets/svg-icon/user.svg';
+import { colors } from '../../config/constants';
+import { update_language } from '../../features/home-page/slices/homeSlice';
+import { TopMenuItem } from '../../schema/general';
+import { RootState } from '../../ultils/store';
+import SvgArabicFlag from '../icon-component/ArabicFlag';
+import SvgGermanFlag from '../icon-component/GermanFlag';
+import SvgGlobal from '../icon-component/Global';
+import SvgTurkeyFlag from '../icon-component/TurkeyFlag';
+import SvgUkFlag from '../icon-component/UkFlag';
 import SVGIcon from '../SVGIcon/SVGIcon';
 import VrLine from '../VrLIne';
-import { ContactContainer, LanguageContainer, MenuItem, TopHeaderMenuContainer } from './HeaderStyled';
-import { useMediaQuery } from 'react-responsive';
-import { TopMenuItem } from '../../schema/general';
-import ReactFlagsSelect from 'react-flags-select';
-import SvgTurkeyFlag from '../../ukit/icon-component/TurkeyFlag';
-import { Select } from 'antd';
-import SvgGermanFlag from '../../ukit/icon-component/GermanFlag';
-import { WhiteBackgroundText } from '../../features/home-page/views/certified/CertifiedStyled';
-import { colors } from '../../config/constants';
-import SvgGlobal from '../../ukit/icon-component/Global';
-import SvgEnglishFlag from '../../ukit/icon-component/EnglishFlag';
-import SvgUkFlag from '../../ukit/icon-component/UkFlag';
+import { MenuItem, TopHeaderMenuContainer } from './HeaderStyled';
 import './TopHeaderMenu.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../ultils/store';
-import { update_language } from '../../features/home-page/slices/homeSlice';
-import SvgArabicFlag from '../icon-component/ArabicFlag';
 const { Option } = Select;
 
 interface ITopHeaderMenuProps {
@@ -31,17 +28,17 @@ const topMenus: TopMenuItem[] = [
 	{
 		name: "About us",
 		icon: user,
-		link: ""
+		link: "/about-go-halal"
 	},
 	{
 		name: "FAQ",
 		icon: message,
-		link: ""
+		link: "/about-go-halal"
 	},
 	{
 		name: "Career",
 		icon: suitcase,
-		link: ""
+		link: "/about-go-halal"
 	}
 ]
 
@@ -73,14 +70,14 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
 	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
 	const dispatch = useDispatch();
-	// const [language, setLanguage] = React.useState<string>('de');
-	const {language} = useSelector((state: RootState) => state.home);
+	const { language } = useSelector((state: RootState) => state.home);
+	const history = useHistory();
 	return (
 		<TopHeaderMenuContainer>
 			{topMenus.map((item, idx) => {
 				return (
 					<React.Fragment key={idx}>
-						<MenuItem key={item.name}>
+						<MenuItem key={item.name} onClick={() => history.push(item.link)}>
 							<SVGIcon src={item.icon} size={lap1600 ? 20 : lap1440 ? 15 : lap1024 ? 15 : 15} /> <span>{item.name}</span>
 						</MenuItem>
 						<VrLine height={12} />
@@ -100,7 +97,7 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 						display: 'flex',
 						alignItems: "center",
 						justifyContent: "flex-start"
-					}} 
+					}}
 					bordered={false}
 					onChange={(value) => {
 						dispatch(update_language(value));
