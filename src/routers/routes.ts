@@ -8,10 +8,19 @@ const Home = Loadable({
 });
 
 const AboutUs = Loadable({
-	loader: () => import("../features/about/pages/AboutUs"),
+  loader: () => import("../features/about/pages/AboutUs"),
+  loading: Loader,
+});
+
+const MeetOurFounders = Loadable({
+  loader: () => import("../features/meet-our-founders/pages/MeetOurFounder"),
+  loading: Loader,
+});
+const Biography = Loadable({
+	loader: () => import("../features/biography/pages/Biography"),
 	loading: Loader,
   });
-  
+
 const routes: IRoute[] = [
   {
     component: Home,
@@ -21,6 +30,16 @@ const routes: IRoute[] = [
   {
     component: AboutUs,
     path: "/about-go-halal",
+    exact: true,
+  },
+  {
+    component: MeetOurFounders,
+    path: "/meet-our-founders",
+    exact: true,
+  },
+  {
+    component: Biography,
+    path: "/biography",
     exact: true,
   },
 ];

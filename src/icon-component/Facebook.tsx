@@ -6,7 +6,7 @@ function SvgFacebook(props: React.SVGProps<SVGSVGElement>) {
       width="1em"
       height="1em"
       viewBox="0 0 16 16"
-      fill="none"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -18,7 +18,7 @@ function SvgFacebook(props: React.SVGProps<SVGSVGElement>) {
       </g>
       <defs>
         <clipPath id="facebook_svg__clip0_3:3042">
-          <path fill="#fff" d="M0 0h15.71v15.98H0z" />
+          <path fill="currentColor" d="M0 0h15.71v15.98H0z" />
         </clipPath>
       </defs>
     </svg>

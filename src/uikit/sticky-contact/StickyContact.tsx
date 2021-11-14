@@ -10,20 +10,22 @@ interface IStickyContactProps {
 
 const StickyContact: React.FunctionComponent<IStickyContactProps> = (props) => {
 	return (
-		<StickyContactContainer>
-			<IconContainer>
-				<SvgCall />
-			</IconContainer>
-			<IconContainer>
-				<SvgCallMessage />
-			</IconContainer>
-			<IconContainer>
-				<SvgEnvelop />
-			</IconContainer>
-			<IconContainer>
-				<SvgInfor />
-			</IconContainer>
-		</StickyContactContainer>
+		<div style={{ position: "absolute", right: "0", height: "100%" }}>
+			<StickyContactContainer>
+				<IconContainer>
+					<SvgCall />
+				</IconContainer>
+				<IconContainer>
+					<SvgCallMessage />
+				</IconContainer>
+				<IconContainer>
+					<SvgEnvelop />
+				</IconContainer>
+				<IconContainer>
+					<SvgInfor />
+				</IconContainer>
+			</StickyContactContainer>
+		</div>
 	);
 };
 
