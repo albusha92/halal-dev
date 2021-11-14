@@ -12,6 +12,7 @@ import WhyGoHalal from '../views/why-go-halal/WhyGoHalal';
 import { HomePageContainer } from './HomPageStyled';
 import Footer from '../../../uikit/footer/Footer';
 import PaymentFooter from '../views/payment-footer/PaymentFooter';
+import HeaderProductFilter from '../../../uikit/header/HeaderProductFilter';
 
 export interface IAppProps {
 }
@@ -19,6 +20,7 @@ export interface IAppProps {
 const HomePage = () => {
 	return (
 		<HomePageContainer>
+			<HeaderProductFilter />
 			<ComingSoon />
 			<WhyGoHalal />
 			<Certified />

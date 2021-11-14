@@ -61,6 +61,7 @@ export const TopHeaderMenuContainer = styled.div`
 export const MenuItem = styled(FontSizeTopHeader)`
   display: flex;
   align-items: center;
+  cursor: pointer;
   color: white;
   & .ant-select-selector{
 	  padding: 0 !important;
@@ -111,7 +112,7 @@ export const FooterHeaderContainer = styled(ResponsivePadding)`
   display: none;
   @media ${device.tablet960} {
     margin-top: 1rem;
-    border-bottom: 1px solid #dddddd;
+    /* border-bottom: 1px solid #dddddd; */
     display: flex;
     align-items: center;
     padding-right: 0.5rem;
@@ -218,7 +219,7 @@ export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   font-weight: bold;
   white-space: nowrap;
   border-bottom: 5px solid;
-  line-height: 0.5rem;
+  /* line-height: 0.5rem; */
   border-color: ${(props) => (props.chosen ? colors.primary : colors.white)};
   transition: all 0.3s linear;
   font-size: 0.85rem;
@@ -239,6 +240,9 @@ export const IconContainer = styled.div`
   }
   @media ${device.tablet768} {
     font-size: 1.5rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1.2rem;
   }
 `;
 

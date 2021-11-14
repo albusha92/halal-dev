@@ -1,15 +1,15 @@
+import { Select } from 'antd';
 import * as React from 'react';
+import { colors } from '../../config/constants';
 import { FooterMenuItemModel } from '../../schema/general';
-import SvgBread from '../icon-compnent/Bread';
-import SvgFrozen from '../icon-compnent/Frozen';
-import SvgFruit from '../icon-compnent/Fruit';
-import SvgMeat from '../icon-compnent/Meat';
-import SvgMilk from '../icon-compnent/Milk';
+import SvgArrowRight from '../icon-component/ArrowRight';
+import SvgBread from '../icon-component/Bread';
+import SvgFrozen from '../icon-component/Frozen';
+import SvgFruit from '../icon-component/Fruit';
+import SvgMeat from '../icon-component/Meat';
+import SvgMilk from '../icon-component/Milk';
 import { FilterContainer, FilterIconContainer, FilterItem, LiItem } from './HeaderProductFilterStyled';
 import { MenuFooterContainer } from './HeaderStyled';
-import { Input, Select } from 'antd';
-import { colors } from '../../config/constants';
-import SvgArrowRight from '../icon-compnent/ArrowRight';
 const { Option } = Select;
 
 interface IHeaderProductFilterProps {

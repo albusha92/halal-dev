@@ -7,10 +7,19 @@ export const FilterContainer = styled(ResponsivePadding)`
 	display: none;
   @media ${device.tablet960} {
 	  display: block;
-    margin-top: 0.75rem;
+    /* margin-top: 0.75rem; */
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   }
+  &::before{
+		content: '';
+		width: 100%;
+		top: -1px;
+		position: absolute;
+		left: 0;
+		height: 1px;
+		background-color: #DDDDDD;
+	}
 `;
 
 interface FilterItemProps {
