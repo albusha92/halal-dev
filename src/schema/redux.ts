@@ -1,3 +1,5 @@
+import { Term } from "./model";
+
 export interface BaseState {
   loading?: boolean;
   success?: boolean;
@@ -10,4 +12,8 @@ export interface MobileMenuState {
 
 export interface HomeState{
 	language: string,
+}
+export interface TermState{
+	terms: Term[];
+	conditions: Term[];
 }

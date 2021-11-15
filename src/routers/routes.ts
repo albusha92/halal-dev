@@ -16,10 +16,16 @@ const MeetOurFounders = Loadable({
   loader: () => import("../features/meet-our-founders/pages/MeetOurFounder"),
   loading: Loader,
 });
+
 const Biography = Loadable({
-	loader: () => import("../features/biography/pages/Biography"),
-	loading: Loader,
-  });
+  loader: () => import("../features/biography/pages/Biography"),
+  loading: Loader,
+});
+
+const Term = Loadable({
+  loader: () => import("../features/term/pages/Term"),
+  loading: Loader,
+});
 
 const routes: IRoute[] = [
   {
@@ -40,6 +46,11 @@ const routes: IRoute[] = [
   {
     component: Biography,
     path: "/biography",
+    exact: true,
+  },
+  {
+    component: Term,
+    path: "/term",
     exact: true,
   },
 ];

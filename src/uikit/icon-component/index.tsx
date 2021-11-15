@@ -1,1 +1,3 @@
-export { default as PlayRound } from './PlayRound'
+export { default as MinusSolid } from './MinusSolid'
+export { default as Minus } from './Minus'
+export { default as PlusSolid } from './PlusSolid'

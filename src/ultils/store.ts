@@ -1,3 +1,4 @@
+import { termReducer } from './../features/term/slices/termSlice';
 import { homeReducer } from "./../features/home-page/slices/homeSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
@@ -10,6 +11,7 @@ import { mobileMenuReducer } from "../uikit/menuSlice";
 const rootReducer = combineReducers({
   home: homeReducer,
   mobileMenu: mobileMenuReducer,
+  term: termReducer,
 });
 
 const persistedReducer = persistReducer(
