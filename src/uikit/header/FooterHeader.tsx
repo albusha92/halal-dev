@@ -18,12 +18,6 @@ interface IFooterHeaderProps {
 
 export const footerMenus: FooterMenuItemModel[] = [
 	{
-		name: "Discounts & Offers",
-		icon: <SvgDiscount />,
-		key: "discount",
-		link: "",
-	},
-	{
 		name: "Recipes",
 		icon: <SvgRecipes />,
 		key: "recipes",
@@ -56,7 +50,7 @@ export const footerMenus: FooterMenuItemModel[] = [
 ]
 
 const FooterHeader: React.FunctionComponent<IFooterHeaderProps> = (props) => {
-	const [current, setCurrent] = React.useState<string>('discount');
+	const [current, setCurrent] = React.useState<string>('');
 
 	return (
 		<FooterHeaderContainer>

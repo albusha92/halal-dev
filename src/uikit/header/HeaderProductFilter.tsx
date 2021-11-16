@@ -51,7 +51,7 @@ const productFilter: FooterMenuItemModel[] = [
 ]
 
 const HeaderProductFilter: React.FunctionComponent<IHeaderProductFilterProps> = (props) => {
-	const [current, setCurrent] = React.useState<string>('fruit-vegetables');
+	const [current, setCurrent] = React.useState<string>('');
 	return (
 		<FilterContainer>
 			<MenuFooterContainer>
