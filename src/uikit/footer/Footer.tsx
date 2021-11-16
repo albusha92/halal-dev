@@ -1,29 +1,16 @@
 import { Select } from 'antd';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import dhl from '../../assets/deliveries/dhl.png';
-import goHalal from '../../assets/deliveries/go-halal.png';
-import hermes from '../../assets/deliveries/hermes.png';
-import ups from '../../assets/deliveries/ups.png';
-import rating from '../../assets/home-page/rating.png';
-import { colors } from '../../config/constants';
-import { update_language } from '../../features/home-page/slices/homeSlice';
 import SvgCall from '../../icon-component/Call';
 import SvgEnvelop from '../../icon-component/Envelop';
 import SvgMarker from '../../icon-component/Marker';
 import { RootState } from '../../ultils/store';
-import { languages } from '../header/TopHeaderMenu';
-import { ContactContainer, ContactInfor, ContentContainer, FooterContainer, IconContainer, PartFourContainer, PartOne, PartThree, PartThreeContainer, PartTwo, PartTwoContainer, PhoneNumber, RatingImage, Title } from './FooterStyled';
-const { Option } = Select;
+import { ContactContainer, ContactInfor, ContentContainer, FooterContainer, IconContainer, PartOne, PartTwo, PartTwoContainer, PhoneNumber, Title } from './FooterStyled';
+
 interface IFooterProps {
 }
 
 const Footer: React.FunctionComponent<IFooterProps> = (props) => {
-
-	const [selected, setSelected] = React.useState<string>("DE");
-	const onSelect = (code: string): void => setSelected(code);
-	const dispatch = useDispatch();
-	const { language } = useSelector((state: RootState) => state.home);
 	return (
 		<FooterContainer>
 			<PartOne>
@@ -114,52 +101,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
 					<ContactInfor>Advertise With Us</ContactInfor>
 				</PartTwoContainer>
 			</PartTwo>
-			<PartThree>
-				<Title>
-					Go Halal Business
-				</Title>
-				<PartThreeContainer>
-					<img src={hermes} alt="" width="100%" />
-					<img src={dhl} alt="" width="100%" />
-					<img src={ups} alt="" width="70%" />
-					<img src={goHalal} alt="" width="70%" />
-				</PartThreeContainer>
-			</PartThree>
-			<PartThree>
-				<Title>
-					Go Halal Business
-				</Title>
-				<PartFourContainer>
-					<RatingImage src={rating} alt="" width="100%" />
-					<ContactContainer>
-						<Select
-							value={language}
-							showArrow={false}
-							style={{
-								width: 120,
-								fontSize: "1rem",
-								color: colors.darkGrey,
-								padding: 0,
-								display: 'flex',
-								alignItems: "center",
-								justifyContent: "center"
-							}} bordered={false}
-							onChange={(value) => {
-								dispatch(update_language(value))
-							}}
-						>
-							{languages.map(item => {
-								return (
-									<Option style={{ color: colors.darkGrey, width: 120 }} value={item.value}>
-										{item.name} {item.icon}
-									</Option>
-								)
-							})}
-
-						</Select>
-					</ContactContainer>
-				</PartFourContainer>
-			</PartThree>
+			
 		</FooterContainer>
 	);
 };

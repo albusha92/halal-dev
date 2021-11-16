@@ -10,7 +10,7 @@ function SvgArrowRight(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M0 10.928l5-5.346L0 .237v10.69z" fill="#444" />
+      <path d="M0 10.5l5-5-5-5v10z" fill="#444" />
     </svg>
   );
 }

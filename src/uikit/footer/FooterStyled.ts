@@ -21,11 +21,11 @@ export const FooterContainer = styled.div`
   } */
 
   @media ${device.lap1440} {
-    padding: 4% 100px;
+    padding: 2% 100px;
   }
 
   @media ${device.lap1600} {
-    padding: 4% 135px;
+    padding: 2% 135px;
   }
   display: flex;
   justify-content: space-between;
@@ -109,6 +109,11 @@ export const ContentContainer = styled(FooterFontSize)`
   @media ${device.mobileS} {
     gap: 0.5rem;
   }
+`;
+
+export const PartnerIamge = styled.div`
+	text-align: center;
+	margin-top: 2rem;
 `;
 
 export const ContactContainer = styled.div`

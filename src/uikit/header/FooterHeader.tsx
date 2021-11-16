@@ -1,4 +1,4 @@
-import { Select } from 'antd';
+import { Dropdown, Select } from 'antd';
 import * as React from 'react';
 import { FooterMenuItemModel } from '../../schema/general';
 import SvgCashBack from '../icon-component/CashBack';
@@ -8,6 +8,7 @@ import SvgGift from '../icon-component/Gift';
 import SvgGoHalal from '../icon-component/GoHalal';
 import SvgNewProduct from '../icon-component/NewProduct';
 import SvgRecipes from '../icon-component/Recipes';
+import DropdownMenu from '../menu/Menu';
 import { FooterHeaderContainer, IconContainer, MenuFooterContainer, MenuFooterItem, MenuWrapper, RecentlyViewContainer } from './HeaderStyled';
 
 const { Option } = Select;
@@ -16,12 +17,6 @@ interface IFooterHeaderProps {
 }
 
 export const footerMenus: FooterMenuItemModel[] = [
-	{
-		name: "Discounts & Offers",
-		icon: <SvgDiscount />,
-		key: "discount",
-		link: "",
-	},
 	{
 		name: "Recipes",
 		icon: <SvgRecipes />,
@@ -55,12 +50,21 @@ export const footerMenus: FooterMenuItemModel[] = [
 ]
 
 const FooterHeader: React.FunctionComponent<IFooterHeaderProps> = (props) => {
-	const [current, setCurrent] = React.useState<string>('discount');
+	const [current, setCurrent] = React.useState<string>('');
 
 	return (
 		<FooterHeaderContainer>
+			{/* <DropdownMenu /> */}
 			<MenuWrapper >
 				<MenuFooterContainer id="content">
+					<Dropdown overlay={<DropdownMenu />} placement="bottomLeft">
+						<li>
+							<MenuFooterItem chosen={current === "discount"} onClick={() => setCurrent("discount")}>
+								<IconContainer><SvgDiscount /></IconContainer>
+								Discounts & Offers
+							</MenuFooterItem>
+						</li>
+					</Dropdown>
 					{footerMenus.map(item => {
 						return (
 							<li key={item.key}>

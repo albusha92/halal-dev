@@ -88,7 +88,7 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 				<SvgGlobal fontSize={20} />
 				<Select
 					value={language}
-					showArrow={false}
+					showArrow={true}
 					style={{
 						width: 120,
 						fontSize: "1rem",

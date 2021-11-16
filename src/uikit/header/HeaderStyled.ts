@@ -72,6 +72,9 @@ export const MenuItem = styled(FontSizeTopHeader)`
 	  justify-content: flex-start;
 	  gap: .5rem;
   }
+  & .ant-select-arrow{
+	  color: white;
+  }
 `;
 
 export const LanguageContainer = styled.div`
