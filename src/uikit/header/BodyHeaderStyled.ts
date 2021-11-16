@@ -59,7 +59,7 @@ export const SearchContainer = styled.div`
   @media ${device.tablet960} {
     order: 0;
     margin-top: 0;
-	flex-basis: min-content;
+    flex-basis: min-content;
   }
 `;
 
@@ -206,10 +206,10 @@ export const MenuIcon = styled.div`
     top: 0px;
   }
   & span:nth-child(2) {
-    top: .4rem;
+    top: 0.4rem;
   }
   & span:nth-child(2) {
-    top: .4rem;
+    top: 0.4rem;
   }
   & span:nth-child(4) {
     bottom: 0;
@@ -224,4 +224,34 @@ export const IconMenuWrapper = styled.div`
   @media ${device.tablet960} {
     display: none;
   }
+`;
+
+export const FollowContainer = styled.div`
+  /* border: 1px solid; */
+  background-color: white;
+  min-width: 180px;
+  font-weight: bold;
+  box-shadow: 0 0 2px 0px ${colors.darkGrey};
+`;
+
+export const FollowTitle = styled.div`
+  border-bottom: 1px solid ${colors.lightGrey};
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+`;
+
+export const SocialItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  border-bottom: 0.5px solid ${colors.lightGrey};
+`;
+
+export const SocialName = styled.div`
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;

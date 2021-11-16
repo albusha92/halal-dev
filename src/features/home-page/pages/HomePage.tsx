@@ -13,7 +13,8 @@ import { HomePageContainer } from './HomPageStyled';
 import Footer from '../../../uikit/footer/Footer';
 import PaymentFooter from '../views/payment-footer/PaymentFooter';
 import HeaderProductFilter from '../../../uikit/header/HeaderProductFilter';
-
+import DeliveryFooter from '../views/delivery-footer/DeliveryFooter';
+import Payment from '../views/payment/Payment';
 export interface IAppProps {
 }
 
@@ -32,6 +33,8 @@ const HomePage = () => {
 			<MoreDetailHome />
 			<Contact />
 			<Footer />
+			<DeliveryFooter />
+			<Payment />
 			<PaymentFooter />
 		</HomePageContainer>
 	);

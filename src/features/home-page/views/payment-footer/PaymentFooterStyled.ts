@@ -24,6 +24,9 @@ export const PaymentFooterContainer = styled.div`
 	gap: 1rem;
 	font-size: .8rem;
   }
+  @media ${device.lap1366}{
+	  padding: 1rem 10rem;
+  }
 `;
 
 export const LegalText = styled.div`
@@ -43,9 +46,9 @@ export const PaymentContainer = styled.div`
 `;
 
 export const PaymentImage = styled.img`
-  
+	width: 100%;
   @media ${device.mobileS} {
-	width: 2.5rem;
+	/* width: 2.5rem; */
   }
 `;
 
