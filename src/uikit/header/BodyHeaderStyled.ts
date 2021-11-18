@@ -33,13 +33,13 @@ export const HeaderLogo = styled.a`
   }
   @media ${device.tablet960} {
     margin-right: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
   }
   @media ${device.lap1280} {
     /* margin-right: 7rem; */
-    width: 4rem;
-    height: 4rem;
+    /* width: 4rem; */
+    /* height: 4rem; */
   }
 `;
 
@@ -75,12 +75,12 @@ export const HalalSearchContainer = styled.div`
 export const SearchIconContainer = styled.div`
   height: 100%;
   cursor: pointer;
-  padding: 1.1rem 0.8rem;
+  padding:0.6rem;
   background-color: ${colors.secondary};
   display: inline-flex;
-  @media ${device.lap1280} {
+  /* @media ${device.lap1280} {
     padding: 1.3rem 0.8rem;
-  }
+  } */
 `;
 
 export const RegionContainer = styled.div`
@@ -171,7 +171,7 @@ export const BodyMenuItem = styled.div`
   position: relative;
   cursor: pointer;
   gap: 0.2rem;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   margin-left: 1rem;
   @media (max-width: 959px) {
     & span {
@@ -193,13 +193,13 @@ export const IconWrapper = styled.div`
     font-size: 1rem;
   }
   @media ${device.mobileL} {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @media ${device.lap1024} {
-    font-size: 1.9rem;
+    /* font-size: 1.9rem; */
   }
   @media ${device.lap1280} {
-    font-size: 1.9rem;
+    /* font-size: 1.9rem; */
   }
   &:hover {
     color: ${colors.primary};
