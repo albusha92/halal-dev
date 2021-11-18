@@ -227,7 +227,7 @@ export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   transition: all 0.3s linear;
   font-size: 0.85rem;
   @media ${device.tablet768} {
-    font-size: 1rem;
+    font-size: 0.676rem;
   }
   &:hover {
     border-color: ${colors.primary};

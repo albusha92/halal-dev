@@ -4,7 +4,7 @@ import { device } from "../config/screensSizes";
 export const ResponsivePadding = styled.div`
   @media ${device.tablet960} {
     width: 100%;
-    max-width: 80rem;
+    /* max-width: 80rem; */
     margin: 0 auto;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -13,8 +13,11 @@ export const ResponsivePadding = styled.div`
     min-height: unset;
     box-shadow: none;
   }
+  @media ${device.lap1024} {
+    /* max-width: 60rem; */
+    width: 90%;
+  }
   @media ${device.lap1280} {
-    max-width: 95rem;
   }
 `;
 
@@ -28,11 +31,11 @@ export const HeaderPaddingStyled = styled.div`
   }
 
   @media ${device.lap1440} {
-    padding: 0 100px;
+    padding: 0 50px;
   }
 
   @media ${device.lap1600} {
-    padding: 0 135px;
+    padding: 0 50px;
   }
 `;
 

@@ -38,7 +38,7 @@ export const FilterItem = styled.div<FilterItemProps>`
   line-height: 2rem;
   font-size: .85rem;
   @media ${device.tablet768} {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   border-color: ${(props) => (props.chosen ? colors.secondary : colors.white)};
   transition: all 0.3s linear;
