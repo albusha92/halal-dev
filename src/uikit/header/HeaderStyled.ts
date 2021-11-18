@@ -216,6 +216,7 @@ interface MenuFooterItemProps {
 export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   margin: 0 2rem 0 0;
   display: flex;
+  padding-bottom: .4rem;
   align-items: center;
   text-decoration: none;
   color: ${(props) => (props.chosen ? colors.primary : colors.darkGrey)};
@@ -227,7 +228,7 @@ export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   transition: all 0.3s linear;
   font-size: 0.85rem;
   @media ${device.tablet768} {
-    font-size: 0.676rem;
+    font-size: 0.75rem;
   }
   &:hover {
     border-color: ${colors.primary};

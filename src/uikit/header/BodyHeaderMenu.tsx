@@ -1,8 +1,9 @@
 import { Dropdown } from 'antd';
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import SvgInstagram from '../../icon-component/Instagram';
 import { BodyMenuItemModel } from '../../schema/general';
+import { RootState } from '../../ultils/store';
 import SvgAddress from '../icon-component/Address';
 import SvgArrowRight from '../icon-component/ArrowRight';
 import SvgCart from '../icon-component/Cart';
@@ -16,7 +17,7 @@ import SvgUser from '../icon-component/User';
 import SvgYotubeRound from '../icon-component/YotubeRound';
 import DropdownMenu from '../menu/Menu';
 import { toggle_menu } from '../menuSlice';
-import { BodyMenuContainer, BodyMenuItem, FollowContainer, FollowTitle, IconMenuWrapper, IconWrapper, MenuIcon, SocialItem, SocialName } from './BodyHeaderStyled';
+import { BodyMenuContainer, BodyMenuItem, BurgerBtn, FollowContainer, FollowTitle, IconMenuWrapper, IconWrapper, MenuIcon, SocialItem, SocialName } from './BodyHeaderStyled';
 import DropdownCart from './dropdown-cart/DropdownCart';
 
 interface IBodyHeaderMenuProps {
@@ -82,6 +83,7 @@ const follow = (
 )
 
 const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) => {
+	const { show } = useSelector((state: RootState) => state.mobileMenu);
 	const dispatch = useDispatch();
 	return (
 		<BodyMenuContainer>
@@ -118,13 +120,10 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 				<span>Account</span>
 			</BodyMenuItem>
 			<IconMenuWrapper>
-				<MenuIcon onClick={() => {
+				<MenuIcon className={show ? "open" : ""} onClick={() => {
 					dispatch(toggle_menu());
 				}}>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
+					<BurgerBtn></BurgerBtn>
 				</MenuIcon>
 			</IconMenuWrapper>
 

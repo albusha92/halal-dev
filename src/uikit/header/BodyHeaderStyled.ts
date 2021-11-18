@@ -4,7 +4,7 @@ import { device } from "../../config/screensSizes";
 import { ResponsivePadding } from "../GeneralStyled";
 
 export const BodyHeaderWrapper = styled(ResponsivePadding)`
-  display: flex;   
+  display: flex;
   align-items: center;
 
   flex-wrap: wrap;
@@ -75,7 +75,7 @@ export const HalalSearchContainer = styled.div`
 export const SearchIconContainer = styled.div`
   height: 100%;
   cursor: pointer;
-  padding:0.6rem;
+  padding: 0.6rem;
   background-color: ${colors.secondary};
   display: inline-flex;
   /* @media ${device.lap1280} {
@@ -206,37 +206,50 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const MenuIcon = styled.div`
-  & span {
-    display: block;
+export const BurgerBtn = styled.div`
+  width: 1.4rem;
+  height: 2px;
+  background-color: ${colors.darkGrey};
+  border: 3px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.3s ease-in-out;
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
+    width: 1.4rem;
     height: 2px;
-    width: 100%;
     background: ${colors.darkGrey};
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  &::before {
+    transform: translateY(-6px);
+  }
+  &::after {
+    transform: translateY(6px);
+  }
+`;
+
+export const MenuIcon = styled.div`
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  &.open ${BurgerBtn} {
+    transform: translateX(-5px);
+    background: transparent;
+    box-shadow: none;
   }
 
-  & span:nth-child(1) {
-    top: 0px;
-  }
-  & span:nth-child(2) {
-    top: 0.4rem;
-  }
-  & span:nth-child(2) {
-    top: 0.4rem;
-  }
-  & span:nth-child(4) {
-    bottom: 0;
+  &.open ${BurgerBtn} {
+    &::before {
+      transform: rotate(45deg) translate(5px, -5px);
+    }
+    &::after {
+      transform: rotate(-45deg) translate(5px, 5px);
+    }
   }
 `;
 
