@@ -198,6 +198,10 @@ export const ContactInfor = styled.span`
   cursor: pointer;
   color: black;
   font-weight: 500;
+  &:hover{
+	  color: ${colors.primary};
+	  font-weight: bold;
+  }
 `;
 
 export const PartTwoContainer = styled(FooterFontSize)`

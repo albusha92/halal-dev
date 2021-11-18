@@ -315,6 +315,9 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   color: white;
+  & svg{
+	  cursor: pointer;
+  }
   @media ${device.mobileS} {
     gap: 1.5rem;
     justify-content: space-between;
