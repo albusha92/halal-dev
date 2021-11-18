@@ -209,39 +209,30 @@ export const BoldText = styled(HightLightText)`
 
 export const OutStoryBtn = styled.div`
   display: inline-flex;
-  padding: 13px 29px;
-  font-size: 24px;
   color: ${colors.white};
   text-transform: capitalize;
   cursor: pointer;
+  border-radius: 50px;
   background-color: ${colors.primary};
   @media ${device.mobileS} {
     font-size: 0.7rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 1.5rem;
     margin-top: 1rem;
-    /* margin: 0 auto; */
   }
   @media ${device.tablet768} {
     font-size: 0.7rem;
-    padding: 0.3rem 0.7rem;
-    margin-top: 1rem;
   }
 
   @media ${device.lap1024} {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 30px 0 0 30px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
   }
 
   @media ${device.lap1440} {
-    font-size: 21px;
-    padding: 11px 24px;
-    margin: 50px 0 0 40px;
+    margin-top: 3rem;
   }
 
   @media ${device.lap1600} {
-    font-size: 24px;
-    padding: 13px 29px;
-    margin: 50px 0 0 40px;
   }
 `;

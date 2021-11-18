@@ -328,10 +328,12 @@ export const IconWrapper = styled.div`
 
   @media ${device.lap1024} {
     gap: 20px;
+	font-size: 1rem;
   }
 
   @media ${device.lap1280} {
-    gap: 30px;
+    gap: 2rem;
+	font-size: 1.2rem;
   }
 
   @media ${device.lap1366} {
@@ -343,7 +345,8 @@ export const IconWrapper = styled.div`
   }
 
   @media ${device.lap1600} {
-    gap: 45px;
+	gap: 2rem;
+	font-size: 1.5rem;
   }
 
   @media ${device.lap1920} {
