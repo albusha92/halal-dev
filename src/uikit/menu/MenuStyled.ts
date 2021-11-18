@@ -34,7 +34,7 @@ export const NameContainer = styled.div`
   align-items: center;
   gap: 0.5rem;
   color: ${colors.darkGrey};
-  font-size: 1rem;
+  font-size: 0.7rem;
   &:hover {
     color: ${colors.primary};
   }

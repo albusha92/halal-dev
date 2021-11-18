@@ -54,7 +54,6 @@ const FooterHeader: React.FunctionComponent<IFooterHeaderProps> = (props) => {
 
 	return (
 		<FooterHeaderContainer>
-			{/* <DropdownMenu /> */}
 			<MenuWrapper >
 				<MenuFooterContainer id="content">
 					<Dropdown overlay={<DropdownMenu />} placement="bottomLeft">
