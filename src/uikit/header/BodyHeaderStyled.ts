@@ -4,7 +4,7 @@ import { device } from "../../config/screensSizes";
 import { ResponsivePadding } from "../GeneralStyled";
 
 export const BodyHeaderWrapper = styled(ResponsivePadding)`
-  display: flex;
+  display: flex;   
   align-items: center;
 
   flex-wrap: wrap;
@@ -32,14 +32,14 @@ export const HeaderLogo = styled.a`
     height: 2.5rem;
   }
   @media ${device.tablet960} {
-    margin-right: 2rem;
-    width: 4rem;
-    height: 4rem;
+    margin-right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   @media ${device.lap1280} {
-    margin-right: 7rem;
-    width: 5rem;
-    height: 5rem;
+    /* margin-right: 7rem; */
+    width: 4rem;
+    height: 4rem;
   }
 `;
 
@@ -75,9 +75,12 @@ export const HalalSearchContainer = styled.div`
 export const SearchIconContainer = styled.div`
   height: 100%;
   cursor: pointer;
-  padding: 0.7rem;
+  padding: 1.1rem 0.8rem;
   background-color: ${colors.secondary};
   display: inline-flex;
+  @media ${device.lap1280} {
+    padding: 1.3rem 0.8rem;
+  }
 `;
 
 export const RegionContainer = styled.div`
@@ -102,22 +105,40 @@ export const RegionContainer = styled.div`
     gap: 0.2rem;
   }
   @media ${device.tablet768} {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 500;
+    gap: 0.4rem;
+  }
+  @media ${device.lap1024} {
+    font-size: 0.6rem;
     gap: 0.2rem;
+  }
+  @media ${device.lap1280} {
+    font-size: 0.7rem;
+    gap: 0.3rem;
+  }
+  @media ${device.lap1440} {
+    font-size: 0.8rem;
+    gap: 0.3rem;
   }
 `;
 
 export const RegionTitle = styled.span`
-  font-size: 13px;
   font-weight: 600;
   @media ${device.mobileS} {
     font-size: 0.45rem;
-    font-weight: 600;
   }
   @media ${device.mobileM} {
-    font-size: 0.6rem;
     font-weight: 600;
+  }
+  @media ${device.tablet768} {
+    font-size: 0.7rem;
+  }
+  @media ${device.lap1280} {
+    font-size: 0.7rem;
+  }
+  @media ${device.lap1440} {
+    font-size: 0.8rem;
   }
 `;
 
@@ -139,7 +160,7 @@ export const BodyMenuContainer = styled.div`
     flex: inherit;
   }
   @media ${device.lap1280} {
-    margin-left: 3rem;
+    margin-left: 0.5rem;
   }
 `;
 
@@ -174,8 +195,11 @@ export const IconWrapper = styled.div`
   @media ${device.mobileL} {
     font-size: 1.5rem;
   }
+  @media ${device.lap1024} {
+    font-size: 1.9rem;
+  }
   @media ${device.lap1280} {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
   &:hover {
     color: ${colors.primary};

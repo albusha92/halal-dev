@@ -1,19 +1,19 @@
 import { Col, Row, Select } from 'antd';
 import * as React from 'react';
-import { PartnerIamge, Title } from '../../../../uikit/footer/FooterStyled';
-import dhl from '../../../../assets/deliveries/dhl.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { useMediaQuery } from 'react-responsive';
+import dhl from '../../../../assets/deliveries/dhl.png';
 import goHalal from '../../../../assets/deliveries/go-halal.png';
 import hermes from '../../../../assets/deliveries/hermes.png';
+import rating from '../../../../assets/deliveries/rate.png';
 import ups from '../../../../assets/deliveries/ups.png';
-import { ContactContainer, DeliveryContainer, Image, ImageContainer, PartnerContainer, RatingContainer, SafetyContainer } from './DeliveryFooterStyled';
-import { useMediaQuery } from 'react-responsive';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../../ultils/store';
 import { colors } from '../../../../config/constants';
-import { update_language } from '../../slices/homeSlice';
+import { PartnerIamge, Title } from '../../../../uikit/footer/FooterStyled';
 import { languages } from '../../../../uikit/header/TopHeaderMenu';
 import SvgGlobal from '../../../../uikit/icon-component/Global';
-import rating from '../../../../assets/deliveries/rating.png';
+import { RootState } from '../../../../ultils/store';
+import { update_language } from '../../slices/homeSlice';
+import { DeliveryContainer, Image, ImageContainer, PartnerContainer, SafetyContainer } from './DeliveryFooterStyled';
 
 interface IDeliveryFooterProps {
 }
@@ -92,7 +92,7 @@ const DeliveryFooter: React.FunctionComponent<IDeliveryFooterProps> = (props) =>
 									>
 										{languages.map(item => {
 											return (
-												<Option style={{ color: colors.darkGrey, width: 120 }} value={item.value}>
+												<Option style={{ color: colors.darkGrey}} value={item.value}>
 													{item.name} {item.icon}
 												</Option>
 											)

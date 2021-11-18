@@ -81,13 +81,16 @@ export const NotifyButton = styled.div`
   background-color: ${colors.primary};
   cursor: pointer;
   display: inline-block;
+  border-radius: 50px;
   @media ${device.mobileS} {
     font-size: .7rem;
-    padding: .5rem 1rem;
+    padding: .3rem 1.5rem;
   }
   @media ${device.lap1440} {
     font-size: .9rem;
-    padding: .5rem 1rem;
+    padding: .5rem 2rem;
+	font-weight: bold;
+	letter-spacing: 1px;
   }
 `;
 

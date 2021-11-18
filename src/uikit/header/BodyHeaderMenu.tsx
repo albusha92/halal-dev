@@ -14,8 +14,10 @@ import SvgRecipes from '../icon-component/Recipes';
 import SvgShoppingList from '../icon-component/ShoppingList';
 import SvgUser from '../icon-component/User';
 import SvgYotubeRound from '../icon-component/YotubeRound';
+import DropdownMenu from '../menu/Menu';
 import { toggle_menu } from '../menuSlice';
 import { BodyMenuContainer, BodyMenuItem, FollowContainer, FollowTitle, IconMenuWrapper, IconWrapper, MenuIcon, SocialItem, SocialName } from './BodyHeaderStyled';
+import DropdownCart from './dropdown-cart/DropdownCart';
 
 interface IBodyHeaderMenuProps {
 }
@@ -39,16 +41,6 @@ const bodyMenuItems: BodyMenuItemModel[] = [
 	{
 		icon: <SvgHeart />,
 		name: "Favorite",
-		link: ""
-	},
-	{
-		icon: <SvgCart />,
-		name: "Cart",
-		link: ""
-	},
-	{
-		icon: <SvgUser />,
-		name: "Accout",
 		link: ""
 	},
 ]
@@ -111,6 +103,20 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 					</BodyMenuItem>
 				);
 			})}
+			<BodyMenuItem>
+				<Dropdown overlay={<DropdownCart />} placement="bottomCenter" arrow>
+					<IconWrapper>
+						<SvgCart />
+					</IconWrapper>
+				</Dropdown>
+				<span>Cart</span>
+			</BodyMenuItem>
+			<BodyMenuItem>
+				<IconWrapper>
+					<SvgUser />
+				</IconWrapper>
+				<span>Account</span>
+			</BodyMenuItem>
 			<IconMenuWrapper>
 				<MenuIcon onClick={() => {
 					dispatch(toggle_menu());
@@ -121,6 +127,7 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 					<span></span>
 				</MenuIcon>
 			</IconMenuWrapper>
+
 		</BodyMenuContainer>
 	);
 };

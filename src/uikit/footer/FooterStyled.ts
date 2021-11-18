@@ -100,11 +100,14 @@ export const PartTwo = styled(FooterPartContainer)`
 export const Title = styled(FooterFontSize)`
   font-weight: bold;
   white-space: nowrap;
+  -webkit-text-stroke-width: 0.5px;
+  letter-spacing: 0.5px;
 `;
 
 export const ContentContainer = styled(FooterFontSize)`
   display: flex;
   flex-direction: column;
+  color: black;
   gap: 20px;
   @media ${device.mobileS} {
     gap: 0.5rem;
@@ -193,6 +196,8 @@ export const PhoneNumber = styled.div`
 
 export const ContactInfor = styled.span`
   cursor: pointer;
+  color: black;
+  font-weight: 500;
 `;
 
 export const PartTwoContainer = styled(FooterFontSize)`

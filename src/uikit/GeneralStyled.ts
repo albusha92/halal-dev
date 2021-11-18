@@ -14,7 +14,7 @@ export const ResponsivePadding = styled.div`
     box-shadow: none;
   }
   @media ${device.lap1280} {
-    max-width: 90rem;
+    max-width: 95rem;
   }
 `;
 

@@ -15,6 +15,7 @@ import PaymentFooter from '../views/payment-footer/PaymentFooter';
 import HeaderProductFilter from '../../../uikit/header/HeaderProductFilter';
 import DeliveryFooter from '../views/delivery-footer/DeliveryFooter';
 import Payment from '../views/payment/Payment';
+import StickyContact from '../../../uikit/sticky-contact/StickyContact';
 export interface IAppProps {
 }
 
@@ -22,6 +23,7 @@ const HomePage = () => {
 	return (
 		<HomePageContainer>
 			<HeaderProductFilter />
+			<StickyContact />
 			<ComingSoon />
 			<WhyGoHalal />
 			<Certified />
