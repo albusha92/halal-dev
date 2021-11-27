@@ -19,16 +19,17 @@ export const Title = styled.div`
     text-align: left;
   }
   @media ${device.tablet960} {
+	max-width: 80rem;
   }
   @media ${device.lap1024} {
     font-size: 1.5rem;
   }
   @media ${device.lap1440} {
-    max-width: 90rem;
     margin: 0 auto;
     padding-left: 0;
   }
   @media ${device.lap1600} {
+	  max-width: 90rem;
   }
 `;
 

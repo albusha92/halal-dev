@@ -5,6 +5,8 @@ import founder1 from '../../../../assets/home-page/co-founder1.png';
 import founder2 from '../../../../assets/home-page/co-founder2.png';
 import founder3 from '../../../../assets/home-page/co-founder3.png';
 import { useMediaQuery } from 'react-responsive';
+import { OutStoryBtn } from '../why-go-halal/WhyGoHalalStyled';
+import { useHistory } from 'react-router';
 
 interface IFounderProps {
 }
@@ -15,7 +17,7 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
 	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
 	const tablet768 = useMediaQuery({ query: '(min-width: 768px)' });
-
+	const history = useHistory();
 	return (
 		<FounderContainer>
 			<FounderBackground />
@@ -33,6 +35,11 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 					<img src={founder3} alt="" width="100%" />
 				</Col>
 			</Row>
+			<div>
+				<OutStoryBtn onClick={() => history.push("/meet-our-founders")}>
+					Meet our founders
+				</OutStoryBtn>
+			</div>
 		</FounderContainer>
 	);
 };

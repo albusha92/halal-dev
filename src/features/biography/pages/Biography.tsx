@@ -12,7 +12,6 @@ interface IBiographyProps {
 
 const Biography: React.FunctionComponent<IBiographyProps> = (props) => {
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
-	const lap1024 = useMediaQuery({ query: '(min-width: 1024px)' });
 	const tablet768 = useMediaQuery({ query: '(min-width: 768px)' });
 	return (
 		<BiographyContainer>

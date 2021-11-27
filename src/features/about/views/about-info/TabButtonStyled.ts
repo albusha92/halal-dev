@@ -14,11 +14,11 @@ export const TabContainer = styled.div`
   }
   @media ${device.mobileM} {
     padding: 0.2rem 1rem;
-	font-size: 0.6rem;
+	font-size: 0.5rem;
   }
   @media ${device.mobileL} {
     padding: 0.2rem 1rem;
-	font-size: 0.7rem;
+	font-size: 0.6rem;
   }
   @media ${device.tablet768} {
     padding: 0.3rem 2rem;

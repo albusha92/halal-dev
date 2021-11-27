@@ -22,9 +22,6 @@ const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
 			<AboutHeader />
 			<AboutInfor />
 			<Footer />
-			<DeliveryFooter />
-			<Payment />
-			<PaymentFooter />
 		</AboutUsContainer>
 	);
 };
