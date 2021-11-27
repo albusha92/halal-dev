@@ -1,11 +1,13 @@
 import { Col, Row } from 'antd';
 import * as React from 'react';
+import { useHistory } from 'react-router';
 import { BoldText, Description, GoHalalText, HightBackgroundText, HightLightText, OutStoryBtn, RightWhyContainer, WhyContainer, WhyTextConatiner } from './WhyGoHalalStyled';
 
 interface IWhyGoHalalProps {
 }
 
 const WhyGoHalal: React.FunctionComponent<IWhyGoHalalProps> = (props) => {
+	const history = useHistory();
 	return (
 		<WhyContainer>
 			<Row>
@@ -28,7 +30,7 @@ const WhyGoHalal: React.FunctionComponent<IWhyGoHalalProps> = (props) => {
 							</HightBackgroundText>
 						</div>
 						<div>
-							<OutStoryBtn>
+							<OutStoryBtn onClick={() => history.push("/about-go-halal", {id: 'scroll'})}>
 								Our Story
 							</OutStoryBtn>
 						</div>
