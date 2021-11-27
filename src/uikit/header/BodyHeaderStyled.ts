@@ -8,7 +8,6 @@ export const BodyHeaderWrapper = styled(ResponsivePadding)`
   align-items: center;
 
   flex-wrap: wrap;
-  min-height: 120px;
   margin-bottom: 4px;
   @media ${device.mobileS} {
     padding: 0.5rem 0.5rem 0;
