@@ -26,19 +26,19 @@ export const TabContainer = styled.div`
   }
   @media ${device.lap1024} {
     padding: 0.4rem 2.7rem;
-	font-size: 1.3rem;
+	font-size: 1rem;
   }
   @media ${device.lap1280} {
     padding: 0.4rem 3.2rem;
-	font-size: 1.3rem;
+	font-size: 1rem;
   }
   @media ${device.lap1440} {
 	padding: 0.4rem 3.2rem;
-	font-size: 1.3rem;
+	font-size: 1rem;
   }
   @media ${device.lap1920} {
 	padding: 0.4rem 3.2rem;
-	font-size: 1.3rem;
+	font-size: 1rem;
   }
   &:hover, &.focus{
 	color: white;

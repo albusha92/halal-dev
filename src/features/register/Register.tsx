@@ -1,6 +1,6 @@
+import { Checkbox, Col, Form, Input, Row } from 'antd';
 import * as React from 'react';
 import { CheckboxContainer, InputContainer, NotifyButton, RegisterContainer, RegisterTitle } from './RegisterStyled';
-import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
 import SelectCountry from './SelectCountry';
 
 interface IRegisterProps {
@@ -14,9 +14,6 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 			</RegisterTitle>
 			<Form
 				name="basic"
-				// labelCol={{ span: 8 }}
-				// wrapperCol={{ span: 16 }}
-				// initialValues={{ remember: true }}
 				onFinish={() => { }}
 				onFinishFailed={() => { }}
 				autoComplete="off"

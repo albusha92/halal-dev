@@ -1,24 +1,23 @@
+import { Col } from 'antd';
 import * as React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { useHistory } from 'react-router';
 import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import avatar from '../../../assets//founders/avatar-member.png';
+import avatar1 from '../../../assets//founders/avatar-member1.png';
 import Footer from '../../../uikit/footer/Footer';
+import SvgArrowLeftSquare from '../../../uikit/icon-component/ArrowLeftSquare';
+import SvgArrowRightSquare from '../../../uikit/icon-component/ArrowRightSquare';
+import IconContact from '../../../uikit/IconContact';
 import StickyContact from '../../../uikit/sticky-contact/StickyContact';
 import { Container, TabContainer, TabContentContainer } from '../../about/views/about-info/AboutInfoStyled';
 import TabButton from '../../about/views/about-info/TabButton';
 import FounderList from '../views/founder-list/FounderList';
 import Introduction from '../views/introduction/Introduction';
-import { MeetOurFounderContainer, TeamTabBtn, TeamTabContainer, TeamTabContent, TeamTabTitle } from './MeetOurFounderStyled';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { AvatarCircle, MemberCardContainer, MemberCardItem, MenberInforContainer, Name, Position } from '../views/meet-team/MeetTeamStyled';
-import IconContact from '../../../uikit/IconContact';
-import avatar from '../../../assets//founders/avatar-member.png';
-import avatar1 from '../../../assets//founders/avatar-member1.png';
-import { Col } from 'antd';
-import MeetTeam from '../views/meet-team/MeetTeam';
-import { useMediaQuery } from 'react-responsive';
-import SvgArrowLeftSquare from '../../../uikit/icon-component/ArrowLeftSquare';
-import SvgArrowRightSquare from '../../../uikit/icon-component/ArrowRightSquare';
-import { useHistory } from 'react-router';
+import { MeetOurFounderContainer, TeamTabBtn, TeamTabContainer, TeamTabContent, TeamTabTitle } from './MeetOurFounderStyled';
 
 interface IMeetOurFoundersProps {
 }
@@ -150,7 +149,7 @@ const ourTeamTabs: teamTabModel[] = [
 ]
 
 function SampleNextArrow(props: any) {
-	const { className, style, onClick } = props;
+	const { onClick } = props;
 	return (
 		<div
 			onClick={onClick}
@@ -171,7 +170,7 @@ function SampleNextArrow(props: any) {
 }
 
 function SamplePrevArrow(props: any) {
-	const { className, style, onClick } = props;
+	const { onClick } = props;
 	return (
 		<div
 			onClick={onClick}
@@ -299,7 +298,7 @@ const tabs: tabModel[] = [
 	{
 		name: "Executive board",
 		value: 'executive-board',
-		render: <OurTeam />,
+		render: <AdvisoryTeam />,
 	},
 ]
 

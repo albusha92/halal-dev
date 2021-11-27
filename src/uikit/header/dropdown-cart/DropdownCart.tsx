@@ -11,43 +11,16 @@ import SvgPickUpDropdown from '../../icon-component/PickUpDropdown';
 import SvgPin from '../../icon-component/Pin';
 import SvgZipcode from '../../icon-component/Zipcode';
 import ChooseFittingHours from './ChooseFittingHours';
-import { Address, ButtonConfirm, ButtonContainer, CalendarContainer, Caption, ConfirmDetail, DeliveryCaption, DeliveryContainer, DropdownCartContainer, DropdownHeader, DropdownTab, FastDelivery, FittingHourContainer, FittingHourItem, HeaderText, Hour, InputAddress, InputContainer, InputIcon, InputZipcode, SlideContent, SlideDown, SlideDownItem, TabIcon, TabItem, VrLine, Zipcode } from './DropdownCartStyled';
+import { Address, ButtonConfirm, ButtonContainer, CalendarContainer, Caption, ConfirmDetail, DeliveryCaption, DeliveryContainer, DropdownCartContainer, DropdownHeader, DropdownTab, FastDelivery, HeaderText, InputAddress, InputContainer, InputIcon, InputZipcode, SlideContent, SlideDown, SlideDownItem, TabIcon, TabItem, VrLine, Zipcode } from './DropdownCartStyled';
 
 interface IDropdownCartProps {
 }
 
-const numOfFields = 3;
 
 const useSSNFields = () => {
-	const [ssnValues, setValue] = React.useState({
-		ssn1: "",
-		ssn2: "",
-		ssn3: ""
-	});
 
 	return {
 		handleChange: (e: any) => {
-			// const { maxLength, value, name } = e.target;
-			// const [fieldName, fieldIndex] = name.split("-");
-
-			// // Check if they hit the max character length
-			// if (value.length >= maxLength) {
-			// 	// Check if it's not the last input field
-			// 	if (parseInt(fieldIndex, 10) < 3) {
-			// 		// Get the next input field
-			// 		const nextSibling: any = document.querySelector(`input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`);
-
-			// 		// If found, focus the next field
-			// 		if (nextSibling !== null) {
-			// 			nextSibling.forcus();
-			// 		}
-			// 	}
-			// }
-
-			// setValue({
-			// 	...value,
-			// 	[`ssn${fieldIndex}`]: value
-			// });
 		}
 	};
 };

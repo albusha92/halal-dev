@@ -1,6 +1,5 @@
-import { Dropdown, Select } from 'antd';
+import { Dropdown } from 'antd';
 import * as React from 'react';
-import { colors } from '../../config/constants';
 import { FooterMenuItemModel } from '../../schema/general';
 import SvgArrowDown from '../icon-component/ArrowDown';
 import SvgArrowRight from '../icon-component/ArrowRight';
@@ -12,7 +11,6 @@ import SvgMilk from '../icon-component/Milk';
 import DropdownMenu from '../menu/Menu';
 import { FilterContainer, FilterIconContainer, FilterItem, LiItem } from './HeaderProductFilterStyled';
 import { MenuFooterContainer } from './HeaderStyled';
-const { Option } = Select;
 
 interface IHeaderProductFilterProps {
 }

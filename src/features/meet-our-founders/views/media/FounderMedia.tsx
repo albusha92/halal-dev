@@ -7,7 +7,7 @@ import SvgGlobal from '../../../../uikit/icon-component/Global';
 import SvgPlayRound from '../../../../uikit/icon-component/PlayRound';
 import { RootState } from '../../../../ultils/store';
 import { update_language } from '../../../home-page/slices/homeSlice';
-import { Description, FounderMediaContainer, Language, OurStoryContainer, VideoContainer } from './FounderMediaStyled';
+import { FounderMediaContainer, Language, OurStoryContainer, VideoContainer } from './FounderMediaStyled';
 const { Option } = Select;
 interface IFounderMediaProps {
 }
@@ -37,7 +37,7 @@ const FounderMedia: React.FunctionComponent<IFounderMediaProps> = (props) => {
 				>
 					{languages.map(item => {
 						return (
-							<Option style={{ color: colors.darkGrey, width: 120 }} value={item.value}>
+							<Option key={item.value} style={{ color: colors.darkGrey, width: 120 }} value={item.value}>
 								{item.name} {item.icon}
 							</Option>
 						)

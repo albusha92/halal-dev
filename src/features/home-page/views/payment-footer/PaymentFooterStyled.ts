@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../../config/constants";
 import { device } from "../../../../config/screensSizes";
-import { ResponsivePadding } from "../../../../uikit/GeneralStyled";
 
 export const PaymentFooterContainer = styled.div`
   display: flex;

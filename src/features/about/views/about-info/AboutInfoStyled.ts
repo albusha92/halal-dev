@@ -39,10 +39,21 @@ export const TabContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  @media ${device.lap1280} {
+    justify-content: center;
+	gap: 2rem;
+  }
+  @media ${device.lap1440} {
+	justify-content: center;
+	gap: 2rem;
+  }
+  @media ${device.lap1920} {
+	justify-content: center;
+	gap: 2rem;
+  }
 `;
 
 export const TabContentContainer = styled.div`
-  /* padding-top: 1rem; */
 `;
 
 export const Title = styled.div`
@@ -69,13 +80,13 @@ export const Title = styled.div`
 	margin-bottom: 1rem;
   }
   @media ${device.lap1024} {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
   }
   @media ${device.lap1440} {
-	font-size: 2.7rem;
+	font-size: 2rem;
   }
   @media ${device.lap1920} {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `;
 
@@ -94,20 +105,20 @@ export const Desctiption = styled.div`
   }
 
   @media ${device.tablet768} {
-    font-size: 1.2rem;
+    font-size: 1rem;
 	-webkit-text-stroke-width: 0.2px;
   }
   @media ${device.tablet960} {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   @media ${device.lap1024} {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   @media ${device.lap1440} {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
   @media ${device.lap1920} {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 `;
 

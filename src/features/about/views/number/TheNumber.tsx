@@ -35,7 +35,7 @@ const TheNumber: React.FunctionComponent<ITheNumberProps> = (props) => {
 
 			{numberList.slice(0, 3).map((item, idx) => {
 				return (
-					<NumberItem>
+					<NumberItem key={idx}>
 						<NumberText>
 							{item.number}
 						</NumberText>
@@ -47,7 +47,7 @@ const TheNumber: React.FunctionComponent<ITheNumberProps> = (props) => {
 			})}
 			{mobileL ? numberList.slice(3, 5).map((item, idx) => {
 				return (
-					<NumberItem>
+					<NumberItem key={idx}>
 						<NumberText>
 							{item.number}
 						</NumberText>
@@ -60,7 +60,7 @@ const TheNumber: React.FunctionComponent<ITheNumberProps> = (props) => {
 				<TheNumberWrap>
 					{numberList.slice(3, 5).map((item, idx) => {
 						return (
-							<NumberItem>
+							<NumberItem key={idx}>
 								<NumberText>
 									{item.number}
 								</NumberText>

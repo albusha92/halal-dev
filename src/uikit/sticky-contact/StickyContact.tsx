@@ -10,7 +10,7 @@ interface IStickyContactProps {
 
 const StickyContact: React.FunctionComponent<IStickyContactProps> = (props) => {
 	return (
-		<div style={{ position: "absolute", right: "0", height: "100%" }}>
+		<div style={{ position: "absolute", right: "0", bottom: "0", height: "100%" }}>
 			<StickyContactContainer>
 				<IconContainer>
 					<SvgCall />

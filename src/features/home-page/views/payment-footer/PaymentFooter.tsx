@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CookiesText, LegalText, PaymentContainer, PaymentFooterContainer, PaymentImage } from './PaymentFooterStyled';
+import { CookiesText, LegalText, PaymentFooterContainer } from './PaymentFooterStyled';
 
 
 

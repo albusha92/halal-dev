@@ -15,7 +15,6 @@ import SvgRecipes from '../icon-component/Recipes';
 import SvgShoppingList from '../icon-component/ShoppingList';
 import SvgUser from '../icon-component/User';
 import SvgYotubeRound from '../icon-component/YotubeRound';
-import DropdownMenu from '../menu/Menu';
 import { toggle_menu } from '../menuSlice';
 import { BodyMenuContainer, BodyMenuItem, BurgerBtn, FollowContainer, FollowTitle, IconMenuWrapper, IconWrapper, MenuIcon, SocialItem, SocialName } from './BodyHeaderStyled';
 import DropdownCart from './dropdown-cart/DropdownCart';
