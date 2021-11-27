@@ -59,11 +59,13 @@ export const Language = styled.div`
     align-items: center;
     gap: 0.4rem;
   }
-  margin: 1rem 0
+  margin: 1rem 0;
 `;
 
 export const VideoContainer = styled.div`
   background-color: #c4c4c4;
+  display: grid;
+  place-items: center;
   @media ${device.mobileS} {
     height: 10rem;
   }

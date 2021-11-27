@@ -15,7 +15,7 @@ const Media: React.FunctionComponent<IMediaProps> = (props) => {
 				We Deliver Superior Customer Service & Business Success Through Our People.
 			</Description>
 			<SeeMore>
-				{`see more videos >`}
+				{/* {`see more videos >`} */}
 			</SeeMore>
 		</MediaContainer>
 	);

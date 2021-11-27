@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { AvatarImage, CirclePoint, DateTimeText, DetailText, HistoryContainer, HistoryItem, HistoryProgress, HistoryProgressMobile, HistoryTitle, InformationContainer, ItemDetail, PointContainer, ProgressBar } from './HistoryStyled';
 import avatar from '../../../../assets/history/avatar.png';
+import avatar1 from '../../../../assets/history/avatar1.png';
 import { Col, Row } from 'antd';
 import moment from 'moment';
 import { useMediaQuery } from 'react-responsive';
@@ -14,7 +15,7 @@ const historyList = [
 		detail: "Sumeet Tumelo and Niraj Carbry come up with for the first time by the idea for Organic Market and get lauched as online marketplace merchant in Califorlia, United States.",
 	},
 	{
-		avatar: avatar,
+		avatar: avatar1,
 		date: moment().format("MMMM DD, YYYY"),
 		detail: "Sumeet Tumelo and Niraj Carbry come up with for the first time by the idea for Organic Market and get lauched as online marketplace merchant in Califorlia, United States.",
 	},
@@ -24,12 +25,12 @@ const historyList = [
 		detail: "Sumeet Tumelo and Niraj Carbry come up with for the first time by the idea for Organic Market and get lauched as online marketplace merchant in Califorlia, United States.",
 	},
 	{
-		avatar: avatar,
+		avatar: avatar1,
 		date: moment().format("MMMM DD, YYYY"),
 		detail: "Sumeet Tumelo and Niraj Carbry come up with for the first time by the idea for Organic Market and get lauched as online marketplace merchant in Califorlia, United States.",
 	},
 	{
-		avatar: avatar,
+		avatar: avatar1,
 		date: moment().format("MMMM DD, YYYY"),
 		detail: "Sumeet Tumelo and Niraj Carbry come up with for the first time by the idea for Organic Market and get lauched as online marketplace merchant in Califorlia, United States.",
 	},
@@ -52,7 +53,7 @@ const History: React.FunctionComponent<IHistoryProps> = (props) => {
 				<HistoryItem>
 					<Row align="middle" justify={"space-between"}>
 						<Col span={4}>
-							<AvatarImage src={avatar} alt="" />
+							<AvatarImage src={currentHistory.avatar} alt="" />
 						</Col>
 						<Col span={18}>
 							<InformationContainer>

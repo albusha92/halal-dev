@@ -65,6 +65,7 @@ export const IconPlayContainer = styled.div`
 export const Description = styled.div`
   font-weight: bold;
   text-align: center;
+  color: white;
   @media ${device.mobileS} {
     font-size: 0.7rem;
     width: 70%;
@@ -97,6 +98,7 @@ export const Description = styled.div`
 
 export const SeeMore = styled.div`
   font-weight: bold;
+  color: white;
   text-align: center;
   @media ${device.mobileS} {
     font-size: 0.6rem;
