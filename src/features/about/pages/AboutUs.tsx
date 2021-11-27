@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useLocation } from 'react-router';
 import Footer from '../../../uikit/footer/Footer';
 import HeaderProductFilter from '../../../uikit/header/HeaderProductFilter';
 import Hrline from '../../../uikit/Hrline';
@@ -11,6 +12,17 @@ interface IAboutUsProps {
 }
 
 const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
+	const location = useLocation();
+
+	React.useEffect(() => {
+		if (location.state) {
+			const ele = document.getElementById("our-story");
+			if (ele) {
+				ele.scrollIntoView();
+			}
+		}
+	}, []);
+
 	return (
 		<AboutUsContainer>
 			<Hrline />

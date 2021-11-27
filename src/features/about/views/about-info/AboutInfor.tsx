@@ -86,10 +86,10 @@ const tabs: tabModel[] = [
 
 
 const AboutInfor: React.FunctionComponent<IAboutInforProps> = (props) => {
-	const [currentTab, setCurrentTab] = React.useState<tabModel>(tabs[1]);
+	const [currentTab, setCurrentTab] = React.useState<tabModel>(tabs[0]);
 	return (
 		<React.Fragment>
-			<Container>
+			<Container id="our-story">
 				<TabContainer>
 					{tabs.map(tab => {
 						return <TabButton key={tab.value} focus={currentTab.value === tab.value} onClick={() => setCurrentTab(tab)} name={tab.name} />
