@@ -1,14 +1,14 @@
 import * as React from 'react';
-import PaymentFooter from '../../home-page/views/payment-footer/PaymentFooter';
 import Footer from '../../../uikit/footer/Footer';
-import Character from '../views/character/Character';
-import History from '../views/history/History';
-import Infor from '../views/infor/Infor';
-import Media from '../views/media/Media';
-import TheNumber from '../views/number/TheNumber';
-import Press from '../views/press/Press';
-import { AboutUsContainer, GreenBackground, HrLine } from './AboutUsStyled';
+import HeaderProductFilter from '../../../uikit/header/HeaderProductFilter';
+import Hrline from '../../../uikit/Hrline';
 import StickyContact from '../../../uikit/sticky-contact/StickyContact';
+import DeliveryFooter from '../../home-page/views/delivery-footer/DeliveryFooter';
+import PaymentFooter from '../../home-page/views/payment-footer/PaymentFooter';
+import Payment from '../../home-page/views/payment/Payment';
+import AboutInfor from '../views/about-info/AboutInfor';
+import AboutHeader from '../views/header/AboutHeader';
+import { AboutUsContainer } from './AboutUsStyled';
 
 interface IAboutUsProps {
 }
@@ -16,17 +16,12 @@ interface IAboutUsProps {
 const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
 	return (
 		<AboutUsContainer>
+			<Hrline />
+			<HeaderProductFilter />
 			<StickyContact />
-			<GreenBackground />
-			<Infor />
-			<HrLine />
-			<TheNumber />
-			<Character />
-			<History />
-			<Media />
-			<Press />
+			<AboutHeader />
+			<AboutInfor />
 			<Footer />
-			<PaymentFooter />
 		</AboutUsContainer>
 	);
 };

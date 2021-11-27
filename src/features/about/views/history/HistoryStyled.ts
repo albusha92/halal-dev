@@ -36,6 +36,10 @@ export const HistoryContainer = styled.div`
 
 export const HistoryTitle = styled.div`
   font-weight: bold;
+  width: 100%;
+  text-align: left;
+  -webkit-text-stroke-width: 0.3px;
+  letter-spacing: 1px;
   color: ${colors.primary};
   @media ${device.mobileS} {
     font-size: 1rem;

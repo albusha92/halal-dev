@@ -3,7 +3,19 @@ import { device } from "../../config/screensSizes";
 import { ResponsivePadding } from "../GeneralStyled";
 import { colors } from "./../../config/constants";
 
-export const HeaderContainer = styled.div``;
+export const HeaderContainer = styled.div`
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+	border-bottom: 0.5px solid ${colors.borderGrey};
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+`;
 
 export const FontSizeTopHeader = styled.div`
   font-size: 0.75rem;
@@ -63,26 +75,26 @@ export const MenuItem = styled(FontSizeTopHeader)`
   align-items: center;
   cursor: pointer;
   color: white;
-  & .ant-select-selector{
-	  padding: 0 !important;
+  & .ant-select-selector {
+    padding: 0 !important;
   }
-  & .ant-select-selection-item{
-	  display: flex;
-	  align-items: center;
-	  justify-content: flex-start;
-	  gap: .5rem;
+  & .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
   }
-  & .ant-select-arrow{
-	  color: white;
+  & .ant-select-arrow {
+    color: white;
   }
 `;
 
 export const LanguageContainer = styled.div`
-	display: flex;
-	align-items: center;
-	font-size: 1rem;
-	gap: .6rem;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.6rem;
+  justify-content: space-between;
 `;
 
 export const ContactContainer = styled.div`
@@ -216,7 +228,7 @@ interface MenuFooterItemProps {
 export const MenuFooterItem = styled.a<MenuFooterItemProps>`
   margin: 0 2rem 0 0;
   display: flex;
-  padding-bottom: .4rem;
+  padding-bottom: 0.4rem;
   align-items: center;
   text-decoration: none;
   color: ${(props) => (props.chosen ? colors.primary : colors.darkGrey)};

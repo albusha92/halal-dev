@@ -1,25 +1,37 @@
-import { FirstLevelMenuContainer } from "./FirstLevelMenuStyled";
 import styled from "styled-components";
 import { colors } from "../../config/constants";
+import { SecondLevelMenuContainer } from "./SecondLevelMenuStyled";
 
-export const MenuContainer = styled.div`
+export const FirstLevelMenuContainer = styled.div`
+  position: absolute;
   background-color: white;
   width: 300px;
-  position: relative;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  right: -300px;
+  z-index: 1000;
   border: 1px solid ${colors.borderGrey};
 `;
 
-export const OlContainer = styled.ol`
-  list-style: none;
+export const MenuTitle = styled.div`
+  font-weight: bold;
+  color: ${colors.primary};
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  font-size: 0.8rem;
+  border-left: 5px solid white;
 `;
 
 export const LiItem = styled.li`
-  border-bottom: 1px solid #f2f2f2;
+  /* border-bottom: 1px solid #f2f2f2; */
   display: flex;
   color: ${colors.lightGrey};
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
+  padding-left: 3rem;
+  font-weight: 400;
   cursor: pointer;
   border-left: 5px solid white;
   &:hover {
@@ -27,23 +39,8 @@ export const LiItem = styled.li`
     font-weight: bold;
     border-left: 5px solid ${colors.primary};
   }
-  &:hover ${FirstLevelMenuContainer} {
+  &:hover ${SecondLevelMenuContainer} {
     visibility: visible;
     opacity: 1;
-  }
-`;
-
-export const LiImage = styled.div`
-  width: 1.4rem;
-`;
-
-export const NameContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: ${colors.darkGrey};
-  font-size: 0.7rem;
-  &:hover {
-    color: ${colors.primary};
   }
 `;

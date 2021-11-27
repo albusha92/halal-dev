@@ -8,6 +8,7 @@ import SvgPinterest from '../../../../icon-component/Pinterest';
 import SvgTwitter from '../../../../icon-component/Twitter';
 import SvgEnvelop from '../../../../icon-component/Envelop';
 import { useMediaQuery } from 'react-responsive';
+import { useHistory } from 'react-router';
 interface IFounderListProps {
 }
 
@@ -34,16 +35,17 @@ const FounderList: React.FunctionComponent<IFounderListProps> = (props) => {
 	const lap1440 = useMediaQuery({ query: '(min-width: 1440px)' });
 	const lap1280 = useMediaQuery({ query: '(min-width: 1280px)' });
 	const tablet768 = useMediaQuery({ query: '(min-width: 768px)' });
+	const history = useHistory();
 	return (
 		<FoundersContainer>
-			<Row justify="center" gutter={lap1440? 120 :lap1280 ? 80 : tablet768 ? 60 : 20}>
+			<Row justify="center" gutter={lap1440 ? 120 : lap1280 ? 80 : tablet768 ? 60 : 20}>
 				{founderList.map((item, idx) => {
 					return (
 						<Col span={lap1280 ? 5 : tablet768 ? 6 : 7}>
 							<FounderItemContainer>
 								<FounderImage src={founder1} alt="" />
 								<InforContainer>
-									<NameContainer>
+									<NameContainer onClick={() => history.push("/biography")}>
 										{item.name}, <span>{item.subName}</span>
 									</NameContainer>
 									<Position>

@@ -27,11 +27,12 @@ import decor from '../../assets/menu/decor.png';
 
 import service from '../../assets/menu/service.png';
 import SvgRight from '../icon-component/Right';
+import FirstLevelMenu from './FirstLevelMenu';
 
 interface IDropdownMenuProps {
 }
 
-const menus = [
+export const menus = [
 	{
 		name: "Discounts & Offers",
 		icon: discount
@@ -152,6 +153,7 @@ const DropdownMenu: React.FunctionComponent<IDropdownMenuProps> = (props) => {
 								</span>
 							</NameContainer>
 							<SvgRight />
+							<FirstLevelMenu title={item.name} />
 						</LiItem>
 					)
 				})}

@@ -35,6 +35,7 @@ export const CharacterContainer = styled.div`
 
 export const ItemContainer = styled.div`
   padding: 0.5rem;
+  height: 100%;
   background-color: #eeeeee;
   display: flex;
   flex-direction: column;
@@ -54,7 +55,7 @@ export const IconContainer = styled.div`
 export const CharacterTitle = styled.div`
   font-weight: bold;
   @media ${device.mobileS} {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   @media ${device.lap1280} {
     font-size: 1rem;
@@ -73,5 +74,10 @@ export const CharacterContent = styled.div`
   }
   @media ${device.lap1440} {
     font-size: 0.7rem;
+	width: 80%;
+  }
+  @media ${device.lap1920} {
+    font-size: 0.7rem;
+	width: 75%;
   }
 `;

@@ -17,16 +17,12 @@ const FounderMedia: React.FunctionComponent<IFounderMediaProps> = (props) => {
 	const { language } = useSelector((state: RootState) => state.home);
 	return (
 		<FounderMediaContainer>
-			<Description>
-				Our team of food scientists, consumer & innovation experts make sure to bring authentic products to your basket <span> through a rigrous screening, verification and auditing processes </span>in the halal supply chain. The ultimate goal is make it sure that the products you choose meet the high quality standards and to promote your health & welness in the best possible manner.
-			</Description>
 			<Language>
 				<SvgGlobal color="black" fontSize={16} />
 				<Select
 					value={language}
-					showArrow={false}
 					style={{
-						width: 120,
+						width: 140,
 						fontSize: "1rem",
 						color: colors.black,
 						padding: 0,
@@ -50,10 +46,10 @@ const FounderMedia: React.FunctionComponent<IFounderMediaProps> = (props) => {
 				</Select>
 			</Language>
 			<VideoContainer>
-
+				<SvgPlayRound style={{cursor: "pointer"}} fontSize="2rem" />
 			</VideoContainer>
 			<OurStoryContainer>
-				<SvgPlayRound />
+
 				{'Our story >>'}
 			</OurStoryContainer>
 		</FounderMediaContainer>

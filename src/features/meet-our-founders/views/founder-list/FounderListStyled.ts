@@ -34,6 +34,7 @@ export const InforContainer = styled.div``;
 
 export const NameContainer = styled.div`
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
   color: ${colors.primary};
   white-space: nowrap;

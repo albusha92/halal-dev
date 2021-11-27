@@ -1,2 +1,2 @@
-export { default as Earth } from './Earth'
-export { default as FastCar } from './FastCar'
+export { default as ArrowLeftSquare } from './ArrowLeftSquare'
+export { default as ArrowRightSquare } from './ArrowRightSquare'

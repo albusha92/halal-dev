@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { colors } from "../../../config/constants";
 import { device } from "../../../config/screensSizes";
 
-export const AboutUsContainer = styled.div``;
+export const AboutUsContainer = styled.div`
+	position: relative;
+`;
 
 export const GreenBackground = styled.div`
   background-color: ${colors.secondary};

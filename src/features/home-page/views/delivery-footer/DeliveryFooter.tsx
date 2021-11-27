@@ -78,7 +78,6 @@ const DeliveryFooter: React.FunctionComponent<IDeliveryFooterProps> = (props) =>
 									<Select
 										value={language}
 										style={{
-											// width: 120,
 											fontSize: "1rem",
 											color: colors.darkGrey,
 											padding: 0,

@@ -56,6 +56,7 @@ export const MenberInforContainer = styled.div`
 
 export const Name = styled.div`
   font-weight: bold;
+  cursor: pointer;
   -webkit-text-stroke-width: 0.1px;
   @media ${device.mobileS} {
     font-size: 0.65rem;
@@ -69,5 +70,22 @@ export const Position = styled.div`
   margin-bottom: 0.5rem;
   @media ${device.mobileS} {
     font-size: 0.55rem;
+  }
+`;
+
+export const MemberCardContainer = styled.div`
+  @media ${device.mobileS} {
+    /* padding: 2rem; */
+    padding: 10px;
+  }
+  @media ${device.tablet768} {
+    padding: 1rem;
+  }
+
+  @media ${device.lap1440} {
+    padding: 3rem;
+  }
+  @media ${device.lap1920} {
+    padding: 2rem;
   }
 `;

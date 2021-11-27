@@ -35,9 +35,6 @@ const HomePage = () => {
 			<MoreDetailHome />
 			<Contact />
 			<Footer />
-			<DeliveryFooter />
-			<Payment />
-			<PaymentFooter />
 		</HomePageContainer>
 	);
 }
