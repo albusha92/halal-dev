@@ -1,16 +1,15 @@
 
 import { Layout } from 'antd';
 import React from 'react';
-import { Switch, useLocation } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { IRoute } from '../schema/route';
+import Header from '../uikit/header/Header';
 import "./AppRouter.css";
 import Route from './Route';
 import routes from './routes';
-import Header from '../uikit/header/Header';
 
 
 export default function AppRouters() {
-	const location = useLocation().pathname;
 	return (
 		<Switch>
 			<Route path="/">

@@ -1,6 +1,5 @@
 import { Input } from 'antd';
 import * as React from 'react';
-import { useMediaQuery } from 'react-responsive';
 import SvgEnvelop from '../../../../icon-component/Envelop';
 import SvgFacebook from '../../../../icon-component/Facebook';
 import SvgInstagram from '../../../../icon-component/Instagram';

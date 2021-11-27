@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Term } from '../../../../schema/model';
-import SvgMinus from '../../../../uikit/icon-component/Minus';
 import SvgMinusSolid from '../../../../uikit/icon-component/MinusSolid';
 import SvgPlusSolid from '../../../../uikit/icon-component/PlusSolid';
 import SvgRectangle from '../../../../uikit/icon-component/Rectangle';

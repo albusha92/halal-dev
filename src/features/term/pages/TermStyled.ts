@@ -1,6 +1,6 @@
-import { colors } from "./../../../config/constants";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { device } from "../../../config/screensSizes";
+import { colors } from "./../../../config/constants";
 
 export const TermContainer = styled.div``;
 

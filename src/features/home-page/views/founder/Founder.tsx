@@ -1,12 +1,12 @@
 import { Col, Row } from 'antd';
 import * as React from 'react';
-import { FounderBackground, FounderContainer, FounderText } from './FounderStyled';
+import { useMediaQuery } from 'react-responsive';
+import { useHistory } from 'react-router';
 import founder1 from '../../../../assets/home-page/co-founder1.png';
 import founder2 from '../../../../assets/home-page/co-founder2.png';
 import founder3 from '../../../../assets/home-page/co-founder3.png';
-import { useMediaQuery } from 'react-responsive';
 import { OutStoryBtn } from '../why-go-halal/WhyGoHalalStyled';
-import { useHistory } from 'react-router';
+import { FounderBackground, FounderContainer, FounderText } from './FounderStyled';
 
 interface IFounderProps {
 }

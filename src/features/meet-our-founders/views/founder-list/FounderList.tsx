@@ -1,14 +1,13 @@
 import { Col, Row } from 'antd';
 import * as React from 'react';
-import { FounderImage, FounderItemContainer, FoundersContainer, Icon, IconContainer, InforContainer, NameContainer, Position } from './FounderListStyled';
+import { useMediaQuery } from 'react-responsive';
+import { useHistory } from 'react-router';
 import founder1 from '../../../../assets/founders/founder1.png';
-import founder2 from '../../../../assets/founders/founder2.png';
+import SvgEnvelop from '../../../../icon-component/Envelop';
 import SvgFacebook from '../../../../icon-component/Facebook';
 import SvgPinterest from '../../../../icon-component/Pinterest';
 import SvgTwitter from '../../../../icon-component/Twitter';
-import SvgEnvelop from '../../../../icon-component/Envelop';
-import { useMediaQuery } from 'react-responsive';
-import { useHistory } from 'react-router';
+import { FounderImage, FounderItemContainer, FoundersContainer, Icon, IconContainer, InforContainer, NameContainer, Position } from './FounderListStyled';
 interface IFounderListProps {
 }
 

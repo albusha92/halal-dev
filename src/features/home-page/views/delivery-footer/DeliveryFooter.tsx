@@ -91,7 +91,7 @@ const DeliveryFooter: React.FunctionComponent<IDeliveryFooterProps> = (props) =>
 									>
 										{languages.map(item => {
 											return (
-												<Option style={{ color: colors.darkGrey}} value={item.value}>
+												<Option key={item.value} style={{ color: colors.darkGrey}} value={item.value}>
 													{item.name} {item.icon}
 												</Option>
 											)
