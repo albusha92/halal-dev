@@ -26,13 +26,13 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 			</FounderText>
 			<Row justify="center" gutter={lap1990 ? 160 : lap1600 ? 160 : lap1440 ? 140 : lap1024 ? 100 : tablet768 ? 60 : 20}>
 				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
-					<img src={founder1} alt="" width="100%" />
+					<img style={{ cursor: "pointer" }} onClick={() => { history.push("/biography") }} src={founder1} alt="" width="100%" />
 				</Col>
 				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
-					<img src={founder2} alt="" width="100%" />
+					<img style={{ cursor: "pointer" }} onClick={() => { history.push("/biography") }} src={founder2} alt="" width="100%" />
 				</Col>
 				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
-					<img src={founder3} alt="" width="100%" />
+					<img style={{ cursor: "pointer" }} onClick={() => { history.push("/biography") }} src={founder3} alt="" width="100%" />
 				</Col>
 			</Row>
 			<div>

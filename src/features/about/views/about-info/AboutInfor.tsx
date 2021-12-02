@@ -17,12 +17,12 @@ interface tabModel {
 	render: any;
 }
 
-const OurStory = () => {
+const CoreValues = () => {
 	return (
 		<React.Fragment>
 			<Container>
 				<Title>
-					Our story
+					Our core values
 				</Title>
 				<Desctiption>
 					Our core values are <span>halal centric</span> and a driving force at Go Halal to offer the<span> best products and services</span> to our customers and partners. Our decisons, work culture and collaborations, our thinking and leadership are based on our core values for <span>creating value for our community, partners for a better and healthy</span> life.
@@ -43,12 +43,12 @@ const OurStory = () => {
 	)
 }
 
-const CoreValues = () => {
+const OurStory = () => {
 	return (
 		<React.Fragment>
 			<Container>
 				<Title>
-					Our core values
+					Our Story
 				</Title>
 				<Desctiption>
 					After migrating to Germany, Dr. Ali Abas Wani (Founder) realised that the current  halal market does not offer high quality  halal products and services. Being a food scientist  with food industry  and  consumer experience for more than 18 years, Dr. Wani  relaised that his experiences can benefit the halal customers and solve this problem to bring high quality authentic halal products in the current market. <br />

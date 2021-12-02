@@ -63,11 +63,11 @@ export const CheckboxContainer = styled.div`
     margin: 1rem;
   }
   @media ${device.tablet768} {
-    font-size: .8rem;
-    margin: .5rem;
+    font-size: 0.8rem;
+    margin: 0.5rem;
   }
   @media ${device.lap1440} {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
   }
   @media ${device.lap1920} {
@@ -83,14 +83,14 @@ export const NotifyButton = styled.div`
   display: inline-block;
   border-radius: 50px;
   @media ${device.mobileS} {
-    font-size: .7rem;
-    padding: .3rem 1.5rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 1.5rem;
   }
   @media ${device.lap1440} {
-    font-size: .9rem;
-    padding: .5rem 2rem;
-	font-weight: bold;
-	letter-spacing: 1px;
+    font-size: 0.9rem;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 `;
 
@@ -99,20 +99,26 @@ export const InputContainer = styled.div`
     @media ${device.mobileS} {
       font-size: 0.8rem;
     }
-	@media ${device.lap1440} {
+    @media ${device.lap1440} {
       font-size: 1rem;
     }
-	@media ${device.lap1920} {
+    @media ${device.lap1920} {
       font-size: 1rem;
     }
   }
 `;
 
-
 export const CountryContainer = styled.div`
-	& button{
-		padding: 0 .5rem;
-		background-color: white;
-		color: ${colors.black};
-	}
+  & button {
+    padding: 0 0.5rem;
+    background-color: white;
+    color: ${colors.black};
+  }
+`;
+
+export const CityOption = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
 `;

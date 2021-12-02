@@ -21,6 +21,7 @@ const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
 				ele.scrollIntoView();
 			}
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
