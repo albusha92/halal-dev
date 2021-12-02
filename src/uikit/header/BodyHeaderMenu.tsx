@@ -94,22 +94,37 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 				</Dropdown>
 				<span>Follow Us</span>
 			</BodyMenuItem>
-			{bodyMenuItems.map((item, idx) => {
-				return (
-					<BodyMenuItem key={idx}>
-						<IconWrapper>
-							{item.icon}
-						</IconWrapper>
-						<span>{item.name}</span>
-					</BodyMenuItem>
-				);
-			})}
-			<BodyMenuItem>
+			<BodyMenuItem >
 				<Dropdown overlay={<DropdownCart />} placement="bottomCenter" arrow>
 					<IconWrapper>
-						<SvgCart />
+						<SvgAddress />
 					</IconWrapper>
 				</Dropdown>
+				<span>Delivery Address</span>
+			</BodyMenuItem>
+			<BodyMenuItem >
+				<IconWrapper>
+					<SvgRecipes />
+				</IconWrapper>
+				<span>My Recipies</span>
+			</BodyMenuItem>
+			<BodyMenuItem >
+				<IconWrapper>
+					<SvgShoppingList />
+				</IconWrapper>
+				<span>Shopping List</span>
+			</BodyMenuItem>
+			<BodyMenuItem >
+				<IconWrapper>
+					<SvgHeart />
+				</IconWrapper>
+				<span>Favorite</span>
+			</BodyMenuItem>
+			<BodyMenuItem>
+
+				<IconWrapper>
+					<SvgCart />
+				</IconWrapper>
 				<span>Cart</span>
 			</BodyMenuItem>
 			<BodyMenuItem>

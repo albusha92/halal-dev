@@ -42,7 +42,7 @@ const FounderList: React.FunctionComponent<IFounderListProps> = (props) => {
 					return (
 						<Col span={lap1280 ? 5 : tablet768 ? 6 : 7}>
 							<FounderItemContainer>
-								<FounderImage src={founder1} alt="" />
+								<FounderImage onClick={() => history.push("/biography")} src={founder1} alt="" />
 								<InforContainer>
 									<NameContainer onClick={() => history.push("/biography")}>
 										{item.name}, <span>{item.subName}</span>

@@ -28,6 +28,7 @@ export const FounderItemContainer = styled.div``;
 
 export const FounderImage = styled.img`
   width: 100%;
+  cursor: pointer;
 `;
 
 export const InforContainer = styled.div``;

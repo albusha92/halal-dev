@@ -15,7 +15,7 @@ export const HistoryContainer = styled.div`
   }
   @media ${device.tablet960} {
     margin: 2rem auto;
-	padding: 1rem;
+    padding: 1rem;
     box-sizing: border-box;
     flex-wrap: nowrap;
     min-height: unset;
@@ -29,7 +29,7 @@ export const HistoryContainer = styled.div`
   }
   @media ${device.lap1600} {
     max-width: 90rem;
-	margin: 0 auto 2rem;
+    margin: 0 auto 2rem;
     /* padding: 1rem 7rem; */
   }
 `;
@@ -151,4 +151,21 @@ export const PointContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const YearsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+`;
+
+export const YearItem = styled.div`
+  color: ${colors.lightGrey};
+  transition: all 0.2s linear;
+  &.chosen {
+    font-weight: bold;
+    color: ${colors.primary};
+  }
 `;
