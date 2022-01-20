@@ -1,6 +1,6 @@
 import { Col, Row } from 'antd';
 import * as React from 'react';
-import { MadeBetterContainer, MadeBetterTextContainer, PrimaryText, SecondaryText } from './MadeBetterStyled';
+import { MadeBetterContainer, MadeBetterTextContainer, PrimaryText, SecondaryText, ThirdText } from './MadeBetterStyled';
 import image from '../../../../assets/home-page/made-better.png';
 interface IMadeBetterProps {
 }
@@ -12,13 +12,15 @@ const MadeBetter: React.FunctionComponent<IMadeBetterProps> = (props) => {
 				<Col span={12}>
 					<MadeBetterTextContainer>
 						<PrimaryText>
-							THe Halal you <br />
+							The Halal you <br />
 							love and Trust
-
 						</PrimaryText>
 						<SecondaryText>
-							made better
+							made better.
 						</SecondaryText>
+						<ThirdText>
+							Better for the world
+						</ThirdText>
 					</MadeBetterTextContainer>
 				</Col>
 				<Col span={12}>

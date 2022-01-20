@@ -1,8 +1,9 @@
+// import { SvgCall } from '@icon-component';
+import { SvgCall } from 'icon-component';
 import * as React from 'react';
 import DeliveryFooter from '../../features/home-page/views/delivery-footer/DeliveryFooter';
 import PaymentFooter from '../../features/home-page/views/payment-footer/PaymentFooter';
 import Payment from '../../features/home-page/views/payment/Payment';
-import SvgCall from '../../icon-component/Call';
 import SvgEnvelop from '../../icon-component/Envelop';
 import SvgMarker from '../../icon-component/Marker';
 import { ContactContainer, ContactInfor, ContentContainer, FooterContainer, IconContainer, PartOne, PartTwo, PartTwoContainer, PhoneNumber, Title } from './FooterStyled';

@@ -32,7 +32,7 @@ export const WhyContainer = styled(HeaderPaddingStyled)`
 
 export const WhyTextConatiner = styled.div`
   font-weight: bold;
-  font-family: "Neutraface 2 Display Titling";
+  /* font-family: "Neutraface 2 Display Titling"; */
   text-transform: uppercase;
   color: ${colors.primary};
   @media ${device.mobileS} {
@@ -112,7 +112,7 @@ export const Description = styled.div`
     font-size: 0.7rem;
   }
   @media ${device.tablet768} {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   @media ${device.lap1024} {

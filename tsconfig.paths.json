@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@components": ["./components"],
+      "@api": ["./api"],
+      "@api/*": ["./api/*"],
+      "@app/*": ["./app/*"],
+      "@app-redux/*": ["./app-redux/*"],
+      "@assets": ["./assets"],
+      "@assets/*": ["./assets/*"],
+      "@config": ["./config"],
+      "@config/*": ["./config/*"],
+      "@constants/*": ["./constants/*"],
+      "@helpers": ["./helpers"],
+      "@helpers/*": ["./helpers/*"],
+      "@hooks": ["./hooks"],
+      "@layout": ["./layout"],
+      "@layout/*": ["./layout/*"],
+      "@middlewares": ["./middlewares"],
+      "@middlewares/*": ["./middlewares/*"],
+      "@modules/*": ["./modules/*"],
+      "@utils/*": ["./utils/*"],
+      "@routes": ["./routes"],
+      "@routes/*": ["./routes/*"],
+	  "icon-component": ["./icon-component"],
+	  "icon-component/*": ["./icon-component/*"]
+    }
+  }
+}

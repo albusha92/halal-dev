@@ -16,7 +16,7 @@ export const FounderBackground = styled.div`
   width: 100%;
   height: 50%;
   top: 0;
-  background-color: ${colors.secondary};
+  background-color: ${colors.primary};
   @media ${device.mobileS} {
     height: 55%;
   }

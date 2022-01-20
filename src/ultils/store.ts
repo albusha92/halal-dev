@@ -1,12 +1,21 @@
-import { termReducer } from './../features/term/slices/termSlice';
+import { termReducer } from "./../features/term/slices/termSlice";
 import { homeReducer } from "./../features/home-page/slices/homeSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import logger from "redux-logger";
-import { persistReducer, persistStore } from "redux-persist";
 import storageSession from "redux-persist/lib/storage/session";
 import thunk from "redux-thunk";
 import { mobileMenuReducer } from "../uikit/menuSlice";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
 
 const rootReducer = combineReducers({
   home: homeReducer,
@@ -19,13 +28,23 @@ const persistedReducer = persistReducer(
     key: "halal-website",
     storage: storageSession,
     whitelist: ["auth"],
+    version: 1,
   },
   rootReducer
 );
 
+const middlewares = [thunk];
+
+process.env.NODE_ENV === "development" && middlewares.push(logger as any);
+
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: process.env.NODE_ENV !== "production" ? [thunk, logger] : [thunk],
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }).concat([...middlewares]),
   devTools: process.env.NODE_ENV !== "production",
 });
 

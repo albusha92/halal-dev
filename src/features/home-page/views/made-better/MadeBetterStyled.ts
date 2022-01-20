@@ -33,21 +33,24 @@ export const MadeBetterTextContainer = styled.div`
 `;
 
 export const PrimaryText = styled.div`
-  font-family: "Neutraface 2 Display Titling";
-  text-transform: uppercase;
+  font-family: "Maven Pro", sans-serif;
+  text-transform: capitalize;
   color: ${colors.primary};
   font-weight: bold;
+  margin-bottom: 0.5rem;
   @media ${device.mobileS} {
     font-size: 1rem;
+	line-height: 1rem;
   }
 
   @media ${device.mobileL} {
     font-size: 1.3rem;
+	line-height: 1.3rem;
   }
 
   @media ${device.tablet768} {
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 2.1rem;
   }
 
   @media ${device.lap1024} {
@@ -56,8 +59,9 @@ export const PrimaryText = styled.div`
   }
 
   @media ${device.lap1280} {
-    font-size: 46px;
-    line-height: 60px;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+	margin-bottom: 1.7rem;
   }
 
   @media ${device.lap1366} {
@@ -76,27 +80,29 @@ export const PrimaryText = styled.div`
   }
 
   @media ${device.lap1920} {
-    font-size: 54px;
+    font-size: 4.2rem;
     line-height: 65px;
   }
 `;
 
 export const SecondaryText = styled.div`
-  font-family: "Neutraface 2 Display Titling";
-  text-transform: uppercase;
+  font-family: "Maven Pro", sans-serif;
+  text-transform: capitalize;
   color: ${colors.secondary};
   font-size: 80px;
   font-weight: bold;
   @media ${device.mobileS} {
     font-size: 1.2rem;
+	line-height: 1rem;
   }
 
   @media ${device.mobileL} {
     font-size: 1.3rem;
   }
-  
+
   @media ${device.tablet768} {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
+	line-height: 2.5rem;
   }
 
   @media ${device.lap1024} {
@@ -104,7 +110,8 @@ export const SecondaryText = styled.div`
   }
 
   @media ${device.lap1280} {
-    font-size: 73px;
+    font-size: 4.2rem;
+	line-height: 4.2rem;
   }
 
   @media ${device.lap1366} {
@@ -121,5 +128,48 @@ export const SecondaryText = styled.div`
 
   @media ${device.lap1920} {
     font-size: 80px;
+  }
+`;
+
+export const ThirdText = styled.div`
+  font-family: "Maven Pro", sans-serif;
+  text-transform: capitalize;
+  color: ${colors.primary};
+  font-size: 80px;
+  font-weight: bold;
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 0.8rem;
+  }
+
+  @media ${device.tablet768} {
+    font-size: 1.4rem;
+  }
+
+  @media ${device.lap1024} {
+    font-size: 2rem;
+  }
+
+  @media ${device.lap1280} {
+    font-size: 2.5rem;
+  }
+
+  @media ${device.lap1366} {
+    font-size: 2.7rem;
+  }
+
+  @media ${device.lap1440} {
+    font-size: 2.8rem;
+  }
+
+  @media ${device.lap1600} {
+    font-size: 2.9rem;
+  }
+
+  @media ${device.lap1920} {
+    font-size: 3rem;
   }
 `;
