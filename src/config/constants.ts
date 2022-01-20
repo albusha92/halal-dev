@@ -8,5 +8,6 @@ export const colors = {
 	darkGrey: "#444444",
 	lightGrey: "#DDDDDD",
 	greyBackground: "#F7F7F7",
-	borderGrey: "#EEEEEE"
+	borderGrey: "#EEEEEE",
+	
 }

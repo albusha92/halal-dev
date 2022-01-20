@@ -1,3 +1,4 @@
+export { default as MarkQuestion } from "./MarkQuestion";
 export { default as MarkComment } from "./MarkComment";
 export { default as AddressHouse } from "./AddressHouse";
 export { default as Bio } from "./Bio";

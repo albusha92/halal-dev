@@ -7,6 +7,7 @@ import Certified from '../views/certified/Certified';
 import ComingSoon from '../views/coming-soon/ComingSoon';
 import Contact from '../views/contact/Contact';
 import Discount from '../views/discount/Discount';
+import Faq from '../views/faq/Faq';
 import Founder from '../views/founder/Founder';
 import MadeBetter from '../views/made-better/MadeBetter';
 import MoreDetailHome from '../views/more-detail-home/MoreDetailHome';
@@ -28,6 +29,7 @@ const HomePage = () => {
 			<Founder />
 			<Discount />
 			<Shipping />
+			<Faq />
 			<Register />
 			<MoreDetailHome />
 			<Contact />
