@@ -1,13 +1,12 @@
 import { Dropdown, Select } from 'antd';
+import { SvgWallet } from 'icon-component';
 import * as React from 'react';
+import { Bio, Blog, BoxOpen, CashBag, Recipes, Wallet } from 'uikit/icon-component';
 import { FooterMenuItemModel } from '../../schema/general';
 import SvgCashBack from '../icon-component/CashBack';
 import SvgDiscount from '../icon-component/Discount';
 import SvgDropDown from '../icon-component/DropDown';
 import SvgGift from '../icon-component/Gift';
-import SvgGoHalal from '../icon-component/GoHalal';
-import SvgNewProduct from '../icon-component/NewProduct';
-import SvgRecipes from '../icon-component/Recipes';
 import DropdownMenu from '../menu/Menu';
 import { FooterHeaderContainer, IconContainer, MenuFooterContainer, MenuFooterItem, MenuWrapper, RecentlyViewContainer } from './HeaderStyled';
 
@@ -18,20 +17,26 @@ interface IFooterHeaderProps {
 
 export const footerMenus: FooterMenuItemModel[] = [
 	{
-		name: "Recipes",
-		icon: <SvgRecipes />,
-		key: "recipes",
+		name: "Bio Products",
+		icon: <Bio />,
+		key: "bio-products",
 		link: "",
 	},
 	{
 		name: "New Products",
-		icon: <SvgNewProduct />,
+		icon: <BoxOpen />,
 		key: "new-product",
 		link: "",
 	},
 	{
+		name: "Recipes",
+		icon: <Recipes />,
+		key: "recipes",
+		link: "",
+	},
+	{
 		name: "Go Halal Family",
-		icon: <SvgGoHalal />,
+		icon: <Wallet />,
 		key: "go-halal-family",
 		link: "",
 	},
@@ -42,9 +47,15 @@ export const footerMenus: FooterMenuItemModel[] = [
 		link: "",
 	},
 	{
-		name: "Zakat or Cashback",
-		icon: <SvgCashBack />,
-		key: "cash-back",
+		name: "Zakat",
+		icon: <CashBag />,
+		key: "zakat",
+		link: "",
+	},
+	{
+		name: "Blog",
+		icon: <Blog />,
+		key: "blog",
 		link: "",
 	},
 ]

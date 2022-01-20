@@ -17,7 +17,7 @@ export default async function request<T>(
 
 	const token = Cookies.get(KEY_ACCESS_TOKEN);
 
-	if(token != undefined){
+	if(token !== undefined){
 		headers["Authorization"] = "Bearer " + token;
 	}
 

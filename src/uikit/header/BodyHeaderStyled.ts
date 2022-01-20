@@ -168,6 +168,7 @@ export const BodyMenuItem = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  font-weight: bold;
   cursor: pointer;
   gap: 0.2rem;
   font-size: 0.6rem;

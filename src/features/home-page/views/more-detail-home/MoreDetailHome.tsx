@@ -1,6 +1,6 @@
+// import SvgComment from '@icon-component/Comment';
 import * as React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import SvgComment from '../../../../icon-component/Comment';
 import SvgRepeat from '../../../../icon-component/Repeat';
 import SvgRocket from '../../../../icon-component/Rocket';
 import SvgTag from '../../../../icon-component/Tag';
@@ -28,7 +28,7 @@ const moreDetails = [
 	},
 	{
 		name: "24/7 Dedicated Support",
-		icon: <SvgComment />,
+		icon: '', //<SvgComment />,
 		description: "AnyWhere & anytime"
 	},
 	{

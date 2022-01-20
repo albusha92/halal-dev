@@ -1,19 +1,15 @@
 import { Dropdown } from 'antd';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { AddressHouse, Heart, SaveArrowDown, ShoppingList } from 'uikit/icon-component';
 import SvgInstagram from '../../icon-component/Instagram';
-import { BodyMenuItemModel } from '../../schema/general';
 import { RootState } from '../../ultils/store';
-import SvgAddress from '../icon-component/Address';
 import SvgArrowRight from '../icon-component/ArrowRight';
 import SvgCart from '../icon-component/Cart';
 import SvgFacebookRound from '../icon-component/FacebookRound';
-import SvgHeart from '../icon-component/Heart';
 import SvgLike from '../icon-component/Like';
 import SvgPrintest from '../icon-component/Printest';
 import SvgRecipes from '../icon-component/Recipes';
-import SvgShoppingList from '../icon-component/ShoppingList';
-import SvgUser from '../icon-component/User';
 import SvgYotubeRound from '../icon-component/YotubeRound';
 import { toggle_menu } from '../menuSlice';
 import { BodyMenuContainer, BodyMenuItem, BurgerBtn, FollowContainer, FollowTitle, IconMenuWrapper, IconWrapper, MenuIcon, SocialItem, SocialName } from './BodyHeaderStyled';
@@ -21,29 +17,6 @@ import DropdownCart from './dropdown-cart/DropdownCart';
 
 interface IBodyHeaderMenuProps {
 }
-
-const bodyMenuItems: BodyMenuItemModel[] = [
-	{
-		icon: <SvgAddress />,
-		name: "Delivery Address",
-		link: ""
-	},
-	{
-		icon: <SvgRecipes />,
-		name: "My Recipies",
-		link: ""
-	},
-	{
-		icon: <SvgShoppingList />,
-		name: "Shopping List",
-		link: ""
-	},
-	{
-		icon: <SvgHeart />,
-		name: "Favorite",
-		link: ""
-	},
-]
 
 const follow = (
 	<FollowContainer>
@@ -81,13 +54,42 @@ const follow = (
 	</FollowContainer>
 )
 
+const items = (
+	<FollowContainer>
+		<FollowTitle>
+			My Items
+		</FollowTitle>
+		<SocialItem>
+			<SocialName>
+				<ShoppingList fontSize={20} />
+				Shopping list
+			</SocialName>
+			<SvgArrowRight />
+		</SocialItem>
+		<SocialItem>
+			<SocialName>
+				<Heart fontSize={20} />
+				Favouries
+			</SocialName>
+			<SvgArrowRight />
+		</SocialItem>
+		<SocialItem>
+			<SocialName>
+				<SaveArrowDown fontSize={20} />
+				Save for later
+			</SocialName>
+			<SvgArrowRight />
+		</SocialItem>
+	</FollowContainer>
+)
+
 const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) => {
 	const { show } = useSelector((state: RootState) => state.mobileMenu);
 	const dispatch = useDispatch();
 	return (
 		<BodyMenuContainer>
 			<BodyMenuItem>
-				<Dropdown overlay={follow} placement="bottomLeft" arrow>
+				<Dropdown trigger={["click"]} overlay={follow} placement="bottomLeft" arrow>
 					<IconWrapper>
 						<SvgLike />
 					</IconWrapper>
@@ -97,10 +99,10 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 			<BodyMenuItem >
 				<Dropdown overlay={<DropdownCart />} placement="bottomCenter" arrow>
 					<IconWrapper>
-						<SvgAddress />
+						<AddressHouse />
 					</IconWrapper>
 				</Dropdown>
-				<span>Delivery Address</span>
+				<span>Address</span>
 			</BodyMenuItem>
 			<BodyMenuItem >
 				<IconWrapper>
@@ -109,29 +111,18 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 				<span>My Recipies</span>
 			</BodyMenuItem>
 			<BodyMenuItem >
-				<IconWrapper>
-					<SvgShoppingList />
-				</IconWrapper>
-				<span>Shopping List</span>
-			</BodyMenuItem>
-			<BodyMenuItem >
-				<IconWrapper>
-					<SvgHeart />
-				</IconWrapper>
-				<span>Favorite</span>
+				<Dropdown trigger={["click"]} overlay={items} placement="bottomCenter" arrow>
+					<IconWrapper>
+						<ShoppingList />
+					</IconWrapper>
+				</Dropdown>
+				<span>My Items</span>
 			</BodyMenuItem>
 			<BodyMenuItem>
-
 				<IconWrapper>
 					<SvgCart />
 				</IconWrapper>
 				<span>Cart</span>
-			</BodyMenuItem>
-			<BodyMenuItem>
-				<IconWrapper>
-					<SvgUser />
-				</IconWrapper>
-				<span>Account</span>
 			</BodyMenuItem>
 			<IconMenuWrapper>
 				<MenuIcon className={show ? "open" : ""} onClick={() => {

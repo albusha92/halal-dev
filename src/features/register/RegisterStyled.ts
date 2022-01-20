@@ -56,7 +56,8 @@ export const RegisterTitle = styled.h1`
 `;
 
 export const CheckboxContainer = styled.div`
-  margin: 40px auto;
+  margin: 40px 0;
+  display: flex;
   color: white;
   @media ${device.mobileS} {
     font-size: 0.6rem;
@@ -80,8 +81,9 @@ export const NotifyButton = styled.div`
   color: white;
   background-color: ${colors.primary};
   cursor: pointer;
+  font-weight: bold;
   display: inline-block;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   @media ${device.mobileS} {
     font-size: 0.7rem;
     padding: 0.3rem 1.5rem;
@@ -121,4 +123,19 @@ export const CityOption = styled.div`
   align-items: center;
   gap: 1rem;
   font-weight: bold;
+`;
+
+export const RegisterText = styled.div`
+  text-align: left;
+  & a {
+    color: ${colors.primary};
+    text-decoration: underline;
+    font-weight: 500;
+  }
+`;
+
+export const CaptchaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 `;

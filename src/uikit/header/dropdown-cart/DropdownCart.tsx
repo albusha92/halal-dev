@@ -1,13 +1,11 @@
 import { Calendar, Input } from 'antd';
 import * as React from 'react';
+import { Car2Dropdown, CarDropdown, PickUpDropdown, Pin } from 'uikit/icon-component';
 import SvgWallet from '../../../icon-component/Wallet';
 import SvgAddress from '../../icon-component/Address';
 import SvgCalendar from '../../icon-component/Calendar';
-import SvgCar2Dropdown from '../../icon-component/Car2Dropdown';
-import SvgCarDropdown from '../../icon-component/CarDropdown';
 import SvgEarth from '../../icon-component/Earth';
 import SvgFastCar from '../../icon-component/FastCar';
-import SvgPickUpDropdown from '../../icon-component/PickUpDropdown';
 import SvgPin from '../../icon-component/Pin';
 import SvgZipcode from '../../icon-component/Zipcode';
 import ChooseFittingHours from './ChooseFittingHours';
@@ -47,19 +45,19 @@ const DropdownCart: React.FunctionComponent<IDropdownCartProps> = (props) => {
 			<DropdownTab>
 				<TabItem className={currentTab === "delivery" ? "chosen" : ""} onClick={() => setCurrentTab("delivery")}>
 					<TabIcon>
-						<SvgCarDropdown />
+						<CarDropdown />
 					</TabIcon>
 					Delivery
 				</TabItem>
 				<TabItem className={currentTab === "pickup" ? "chosen" : ""} onClick={() => setCurrentTab("pickup")}>
 					<TabIcon>
-						<SvgPickUpDropdown />
+						<PickUpDropdown />
 					</TabIcon>
 					Pick up
 				</TabItem>
 				<TabItem className={currentTab === "drivein" ? "chosen" : ""} onClick={() => setCurrentTab("drivein")}>
 					<TabIcon>
-						<SvgCar2Dropdown />
+						<Car2Dropdown />
 					</TabIcon>
 					Drive in
 				</TabItem>
@@ -98,7 +96,7 @@ const DropdownCart: React.FunctionComponent<IDropdownCartProps> = (props) => {
 								<Input placeholder="Search by address" bordered={false} />
 							</InputAddress>
 							<InputIcon>
-								<SvgPin />
+								<Pin />
 							</InputIcon>
 						</InputContainer>
 					</Address>

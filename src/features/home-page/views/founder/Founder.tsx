@@ -22,7 +22,7 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 		<FounderContainer>
 			<FounderBackground />
 			<FounderText>
-				meet our founders
+				our founders
 			</FounderText>
 			<Row justify="center" gutter={lap1990 ? 160 : lap1600 ? 160 : lap1440 ? 140 : lap1024 ? 100 : tablet768 ? 60 : 20}>
 				<Col span={lap1990 ? 5 : lap1600 ? 6 : lap1440 ? 6 : lap1024 ? 6 : 6}>
@@ -35,11 +35,11 @@ const Founder: React.FunctionComponent<IFounderProps> = (props) => {
 					<img style={{ cursor: "pointer" }} onClick={() => { history.push("/biography") }} src={founder3} alt="" width="100%" />
 				</Col>
 			</Row>
-			<div>
+			{/* <div>
 				<OutStoryBtn onClick={() => history.push("/meet-our-founders")}>
 					Meet our founders
 				</OutStoryBtn>
-			</div>
+			</div> */}
 		</FounderContainer>
 	);
 };
