@@ -26,7 +26,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
 						</div>
 						<ContactContainer>
 							<IconContainer>
-								<SvgCall />
+								<SvgCall color='white' />
 							</IconContainer>
 							<div>
 								Hotline (Mo. -Sa. 8 -20 Hrs.)
@@ -45,7 +45,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
 						</ContactContainer>
 						<ContactContainer>
 							<IconContainer>
-								<SvgEnvelop />
+								<SvgEnvelop color='white' />
 							</IconContainer>
 							<div>
 								support@gohalalshop.com

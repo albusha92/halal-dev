@@ -46,10 +46,12 @@ export const FaqTitle = styled.h1`
     font-size: 1.8rem;
   }
   @media ${device.lap1920} {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 `;
 
 export const HaveQuestionText = styled.div`
   color: white;
+  font-size: 1rem;
+  font-weight: 500;
 `;

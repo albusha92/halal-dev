@@ -57,7 +57,7 @@ const HeaderProductFilter: React.FunctionComponent<IHeaderProductFilterProps> = 
 					<li style={{cursor: "pointer"}}>
 						<FilterItem style={{ margin: 0 }} chosen={current === 'all'} onClick={() => setCurrent('all')}>
 							All category
-							<SvgArrowDown style={{fontSize: "12px", marginLeft: "0.5rem"}} />
+							<SvgArrowDown color='#444' style={{fontSize: "12px", marginLeft: "0.5rem"}} />
 						</FilterItem>
 					</li>
 				</Dropdown>
