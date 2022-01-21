@@ -10,7 +10,7 @@ function SvgArrowDown(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M0 .651l5 5.346L10 .65H0z" fill="#444" />
+      <path d="M0 .651l5 5.346L10 .65H0z" fill="currentColor" />
     </svg>
   );
 }

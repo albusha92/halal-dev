@@ -5,6 +5,7 @@ import StickyContact from '../../../uikit/sticky-contact/StickyContact';
 import Register from '../../register/Register';
 import Certified from '../views/certified/Certified';
 import ComingSoon from '../views/coming-soon/ComingSoon';
+import ContactUs from '../views/contact-us/ContactUs';
 import Contact from '../views/contact/Contact';
 import Discount from '../views/discount/Discount';
 import Faq from '../views/faq/Faq';
@@ -30,6 +31,7 @@ const HomePage = () => {
 			<Discount />
 			<Shipping />
 			<Faq />
+			<ContactUs />
 			<Register />
 			<MoreDetailHome />
 			<Contact />

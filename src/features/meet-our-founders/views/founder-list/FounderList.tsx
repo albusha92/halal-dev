@@ -61,7 +61,7 @@ const FounderList: React.FunctionComponent<IFounderListProps> = (props) => {
 											<SvgTwitter />
 										</Icon>
 										<Icon>
-											<SvgEnvelop />
+											<SvgEnvelop color='white' />
 										</Icon>
 									</IconContainer>
 								</InforContainer>

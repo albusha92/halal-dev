@@ -50,7 +50,7 @@ const AdvisoryBoard: React.FunctionComponent<IAdvisoryBoardProps> = (props) => {
 												<SvgTwitter />
 											</Icon>
 											<Icon>
-												<SvgEnvelop />
+												<SvgEnvelop color='white' />
 											</Icon>
 										</IconContainer>
 									</MenberInforContainer>

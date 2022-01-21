@@ -96,7 +96,7 @@ const DropdownCart: React.FunctionComponent<IDropdownCartProps> = (props) => {
 								<Input placeholder="Search by address" bordered={false} />
 							</InputAddress>
 							<InputIcon>
-								<Pin />
+								<Pin color='white' />
 							</InputIcon>
 						</InputContainer>
 					</Address>

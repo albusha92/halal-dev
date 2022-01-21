@@ -21,7 +21,7 @@ const IconContact: React.FunctionComponent<IIconContactProps> = (props) => {
 				<SvgTwitter />
 			</Icon>
 			<Icon>
-				<SvgEnvelop />
+				<SvgEnvelop color='white' />
 			</Icon>
 		</IconContainer>
 	);

@@ -13,7 +13,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
 			<RegisterContainer>
 				<RegisterTextContainer>
 					<IconContainer>
-						<SvgEnvelop />
+						<SvgEnvelop color='white' />
 					</IconContainer>
 					Register for Updates
 				</RegisterTextContainer>

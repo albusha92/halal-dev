@@ -13,13 +13,13 @@ const StickyContact: React.FunctionComponent<IStickyContactProps> = (props) => {
 		<div style={{ position: "absolute", right: "0", bottom: "0", height: "100%" }}>
 			<StickyContactContainer>
 				<IconContainer>
-					<SvgCall />
+					<SvgCall color='white' />
 				</IconContainer>
 				<IconContainer>
 					<SvgCallMessage />
 				</IconContainer>
 				<IconContainer>
-					<SvgEnvelop />
+					<SvgEnvelop color='white' />
 				</IconContainer>
 				<IconContainer>
 					<SvgInfor />
