@@ -1,10 +1,11 @@
-import { Col, Form, Input, Row, Select } from 'antd';
+import { Col, Dropdown, Form, Input, Row, Select } from 'antd';
 import contactImg from 'assets/home-page/contact.png';
 import { colors } from 'config/constants';
 import { NotifyButton } from 'features/register/RegisterStyled';
 import * as React from 'react';
 import { ArrowDown, Call, Envelop, Pin } from 'uikit/icon-component';
-import { ArrowDownInput, ContactUsContainer, CtsInforContainer, CtsInforItem, CtuContent, CtuSubTitle, CtuTitle } from './ContactUsStyled';
+import { ArrowDownInput, ContactUsContainer, CtsInforContainer, CtsInforItem, CtuContent, CtuSubTitle, CtuTitle, YourInquiry } from './ContactUsStyled';
+import InquiryCheckbox from './InquiryCheckbox';
 
 interface IContactUsProps {
 }
@@ -42,7 +43,6 @@ const ContactUs: React.FunctionComponent<IContactUsProps> = (props) => {
 													style={{ textAlign: "center", fontWeight: 500 }}
 													defaultValue={"mr"}
 												>
-
 													<Select.Option value={'mr'}>
 														Mr.
 													</Select.Option>
@@ -58,20 +58,16 @@ const ContactUs: React.FunctionComponent<IContactUsProps> = (props) => {
 											name="first_name"
 
 										>
-											{/* <InputContainer> */}
 											<Input style={{
 											}} placeholder="First Name" />
-											{/* </InputContainer> */}
 										</Form.Item>
 									</Col>
 									<Col xs={24} md={10}>
 										<Form.Item
 											name="last_name"
 										>
-											{/* <InputContainer> */}
 											<Input style={{
 											}} placeholder="Last Name" />
-											{/* </InputContainer> */}
 										</Form.Item>
 									</Col>
 									<Col xs={24} md={24}>
@@ -85,16 +81,21 @@ const ContactUs: React.FunctionComponent<IContactUsProps> = (props) => {
 										</Form.Item>
 									</Col>
 									<Col xs={24} md={24}>
-										<Form.Item
-											name="inquiry"
-										>
-											<ArrowDownInput>
-												<ArrowDown color='white' fontSize={'0.5rem'} />
-											</ArrowDownInput>
-											<Input style={{
-											}} placeholder="Your Inquiry" />
+										<Dropdown trigger={["click"]} overlay={<InquiryCheckbox />} placement="bottomLeft">
+											<Form.Item
+												name="inquiry"
+											>
+												<YourInquiry>
+													Your Inquiry
+													<ArrowDownInput>
+														<ArrowDown color='white' fontSize={'0.5rem'} />
+													</ArrowDownInput>
+												</YourInquiry>
+												<Input style={{
+												}} placeholder="Your Inquiry" />
 
-										</Form.Item>
+											</Form.Item>
+										</Dropdown>
 									</Col>
 									<Col xs={24} md={24}>
 										<Form.Item

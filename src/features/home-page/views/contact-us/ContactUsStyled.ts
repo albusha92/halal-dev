@@ -40,13 +40,24 @@ export const CtsInforItem = styled.div`
 `;
 
 export const ArrowDownInput = styled.div`
-  position: absolute;
-  z-index: 1;
   height: 100%;
   background: ${colors.secondary};
   display: flex;
   align-items: center;
   padding: 0.8rem;
+`;
+
+export const YourInquiry = styled.div`
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding-left: 0.7rem;
+  cursor: pointer;
+  align-items: center;
   top: 0;
   right: 0;
 `;

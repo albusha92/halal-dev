@@ -1,14 +1,8 @@
 import { Checkbox, Col, Form, Input, Row, Select } from 'antd';
 import * as React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import SvgAachen from '../../assets/svg-flags/Aachen';
-import SvgBergischGladbach from '../../assets/svg-flags/BergischGladbach';
-import SvgBerlin from '../../assets/svg-flags/Berlin';
-import SvgBottrop from '../../assets/svg-flags/Bottrop';
-import SvgHissflaggeBielefeld from '../../assets/svg-flags/HissflaggeBielefeld';
-import SvgKreisfreienStadtBonn from '../../assets/svg-flags/KreisfreienStadtBonn';
-import SvgStadtBottrop from '../../assets/svg-flags/StadtBottrop';
 import { CaptchaContainer, CheckboxContainer, CityOption, InputContainer, NotifyButton, RegisterContainer, RegisterText, RegisterTitle } from './RegisterStyled';
+import ThankModal from './ThankModal';
 
 interface IRegisterProps {
 }
@@ -6651,9 +6645,9 @@ const cityFlags = [
 
 const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 	const [city, setCity] = React.useState<string>("Berlin");
+	const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
 
 	const handleChange = (value: any) => {
-
 		console.log("Captcha value:", value);
 	}
 
@@ -6716,7 +6710,7 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 						>
 							{cityFlags.map((item, idx) => {
 								return (
-									<Select.Option value={item.city}>
+									<Select.Option key={item.city} value={item.city}>
 										<CityOption>
 											<span>{item.city}</span>
 										</CityOption>
@@ -6743,9 +6737,12 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
 						asyncScriptOnLoad={asyncScriptOnLoad}
 					/>
 				</CaptchaContainer>
-				<NotifyButton>
+				<NotifyButton onClick={() => {
+					setVisibleModal(true);
+				}}>
 					Subscribe
 				</NotifyButton>
+				<ThankModal text='Thank you for subscribing the offers and update !' setVisible={setVisibleModal} visible={visibleModal} />
 			</Form>
 		</RegisterContainer>
 	);
