@@ -1,4 +1,4 @@
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { CloseOutlined } from '@ant-design/icons';
 import { Checkbox } from 'antd';
 import * as React from 'react';
 import { BeefOutline, ChickenOutline, LambOutline } from 'uikit/icon-component';

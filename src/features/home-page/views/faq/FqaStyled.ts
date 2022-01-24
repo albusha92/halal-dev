@@ -14,6 +14,12 @@ export const FaqTitleContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 1% 5% 1rem;
+  @media ${device.mobileS} {
+    padding: 3% 5% 1rem;
+  }
+  @media ${device.tablet768} {
+    padding: 1% 5% 1rem;
+  }
 `;
 
 export const FaqIconContainer = styled.div``;
@@ -27,7 +33,7 @@ export const FaqTitle = styled.h1`
   gap: 0.3rem;
   margin-bottom: 0;
   @media ${device.mobileS} {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   @media ${device.mobileL} {
     font-size: 1rem;
@@ -54,4 +60,11 @@ export const HaveQuestionText = styled.div`
   color: white;
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
+  @media ${device.mobileS} {
+    font-size: 0.8rem;
+  }
+  @media ${device.tablet768} {
+    font-size: 1rem;
+  }
 `;
