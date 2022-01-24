@@ -4,6 +4,7 @@ import * as React from 'react';
 import { CheckAll, CheckboxItemContainer, IinquiryTitle, InquiryCheckboxContainer } from './InquiryCheckboxStyled';
 
 interface IInquiryCheckboxProps {
+	closeDropdown: () => void
 }
 const plainOptions = [
 	{
@@ -55,7 +56,7 @@ const plainOptions = [
 		label: 'Other'
 	},
 ];
-const InquiryCheckbox: React.FunctionComponent<IInquiryCheckboxProps> = (props) => {
+const InquiryCheckbox: React.FunctionComponent<IInquiryCheckboxProps> = ({closeDropdown}) => {
 	const [checkedList, setCheckedList] = React.useState([]);
 	const [indeterminate, setIndeterminate] = React.useState(true);
 	const [checkAll, setCheckAll] = React.useState(true);
@@ -76,7 +77,7 @@ const InquiryCheckbox: React.FunctionComponent<IInquiryCheckboxProps> = (props) 
 		<InquiryCheckboxContainer>
 			<IinquiryTitle>
 				Your Query
-				<CloseOutlined style={{ cursor: "pointer" }} />
+				<CloseOutlined onClick={() => closeDropdown()} style={{ cursor: "pointer" }} />
 			</IinquiryTitle>
 			<CheckAll>
 				<Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll}>

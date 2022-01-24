@@ -22,6 +22,9 @@ export const CheckAll = styled.div`
     width: 100%;
     justify-content: flex-start;
     flex-direction: row-reverse;
+	& .ant-checkbox-indeterminate .ant-checkbox-inner{
+		background-color: white;
+	}
     & .ant-checkbox-wrapper:hover .ant-checkbox-inner,
     .ant-checkbox:hover .ant-checkbox-inner,
     .ant-checkbox-input:focus + .ant-checkbox-inner {

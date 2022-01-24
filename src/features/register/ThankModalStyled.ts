@@ -1,4 +1,5 @@
 import { colors } from "config/constants";
+import { device } from "config/screensSizes";
 import styled from "styled-components";
 
 export const ThankModalContainer = styled.div``;
@@ -26,6 +27,21 @@ export const ThankModalContent = styled.div`
   background-color: white;
   padding: 3rem 5rem 1rem;
   text-align: center;
+  @media ${device.mobileS} {
+    padding: 3rem 1rem 1rem;
+  }
+  @media ${device.mobileL} {
+    padding: 3rem 1rem 1rem;
+  }
+  @media ${device.lap1024} {
+    padding: 3rem 5rem 1rem;
+  }
+  @media ${device.lap1440} {
+    padding: 3rem 5rem 1rem;
+  }
+  @media ${device.lap1920} {
+    padding: 3rem 5rem 1rem;
+  }
 `;
 
 export const ThankForSubText = styled.div`
@@ -72,4 +88,11 @@ export const ThankModalFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${device.mobileS} {
+    margin: 0 1rem;
+  }
+  @media ${device.lap1024} {
+    margin: 0 5rem;
+  }
 `;
