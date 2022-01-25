@@ -2,6 +2,20 @@ import styled from "styled-components";
 import { colors } from "../../../../config/constants";
 import { device } from "../../../../config/screensSizes";
 
+export const TabHeaderContainer = styled.div`
+  background-color: ${colors.primary};
+  padding: 0 15%;
+  @media ${device.mobileS} {
+    padding: 0;
+  }
+  @media ${device.tablet768} {
+    padding: 0 5%;
+  }
+  @media ${device.lap1366} {
+    padding: 0 15%;
+  }
+`;
+
 export const Container = styled.div`
   padding: 0.5rem;
 
@@ -41,20 +55,16 @@ export const TabContainer = styled.div`
   justify-content: space-between;
   @media ${device.lap1280} {
     justify-content: center;
-	gap: 2rem;
   }
   @media ${device.lap1440} {
-	justify-content: center;
-	gap: 2rem;
+    justify-content: center;
   }
   @media ${device.lap1920} {
-	justify-content: center;
-	gap: 2rem;
+    justify-content: center;
   }
 `;
 
-export const TabContentContainer = styled.div`
-`;
+export const TabContentContainer = styled.div``;
 
 export const Title = styled.div`
   text-align: center;
@@ -73,17 +83,17 @@ export const Title = styled.div`
   @media ${device.tablet768} {
     font-size: 1.5rem;
     -webkit-text-stroke-width: 1px;
-	letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
   }
   @media ${device.tablet960} {
     font-size: 1.7rem;
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
   }
   @media ${device.lap1024} {
-	font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   @media ${device.lap1440} {
-	font-size: 2rem;
+    font-size: 2rem;
   }
   @media ${device.lap1920} {
     font-size: 2rem;
@@ -106,7 +116,7 @@ export const Desctiption = styled.div`
 
   @media ${device.tablet768} {
     font-size: 1rem;
-	-webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-width: 0.2px;
   }
   @media ${device.tablet960} {
     font-size: 1rem;
@@ -124,4 +134,14 @@ export const Desctiption = styled.div`
 
 export const CharacterContainer = styled.div`
   padding: 1rem 0;
+`;
+
+export const MisstionContainer = styled.div`
+  padding: 10%;
+  @media ${device.mobileS} {
+    padding: 2rem 0.5rem;
+  }
+  @media ${device.tablet768} {
+    padding: 10%;
+  }
 `;

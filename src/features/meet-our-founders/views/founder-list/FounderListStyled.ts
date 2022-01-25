@@ -45,9 +45,9 @@ export const NameContainer = styled.div`
   }
   @media ${device.mobileS} {
     gap: 2px;
-    font-size: 0.45rem;
+    font-size: 0.8rem;
     & span {
-      font-size: 0.4rem;
+      font-size: 0.8rem;
     }
   }
   @media ${device.tablet768} {
@@ -76,7 +76,7 @@ export const NameContainer = styled.div`
 export const Position = styled.div`
   color: #737373;
   @media ${device.mobileS} {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
   @media ${device.tablet768} {
     font-size: 0.7rem;
@@ -104,7 +104,7 @@ export const Icon = styled.div`
     color: ${colors.primary};
   }
   @media ${device.mobileS} {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   @media ${device.tablet768} {
     font-size: 0.9rem;

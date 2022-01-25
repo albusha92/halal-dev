@@ -99,7 +99,7 @@ const BodyHeaderMenu: React.FunctionComponent<IBodyHeaderMenuProps> = (props) =>
 			<BodyMenuItem >
 				<Dropdown overlay={<DropdownCart />} placement="bottomCenter" arrow>
 					<IconWrapper>
-						<AddressHouse />
+						<AddressHouse color='#444' />
 					</IconWrapper>
 				</Dropdown>
 				<span>Address</span>

@@ -44,7 +44,7 @@ export const Content = styled.div`
 `;
 
 export const Caption = styled.div`
-  color: ${colors.white};
+  color: ${colors.primary};
   font-weight: bold;
   display: inline-block;
 
@@ -90,7 +90,7 @@ export const Caption = styled.div`
 `;
 
 export const SubCaption = styled.div`
-  color: ${colors.primary};
+  color: ${colors.white};
   font-weight: bold;
   @media ${device.mobileS} {
     font-size: 0.8rem;
@@ -112,13 +112,13 @@ export const SubCaption = styled.div`
     font-size: 2.3rem;
   }
   @media ${device.lap1024} {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   @media ${device.lap1440} {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   @media ${device.lap1920} {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     margin: 2rem 0;
   }
 `;
@@ -146,16 +146,16 @@ export const Detail = styled.div`
     line-height: 1.8rem;
   }
   @media ${device.lap1024} {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     width: 75%;
   }
   @media ${device.lap1440} {
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 2.5rem;
   }
   @media ${device.lap1920} {
     width: 65%;
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     line-height: 3.2rem;
   }
 `;

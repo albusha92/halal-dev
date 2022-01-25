@@ -75,41 +75,47 @@ export const ShippingImageText = styled.img`
 
 export const CaptionMunchen = styled.div`
   font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
   color: ${colors.primary};
+  transition: all 0.9s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+  }
   @media ${device.mobileS} {
     font-size: 0.5rem;
     /* -webkit-text-stroke-width: 0.3px; */
-	margin-top: 0.3rem;
+    margin-top: 0.3rem;
   }
   @media ${device.mobileM} {
     font-size: 0.6rem;
   }
   @media ${device.tablet768} {
     font-size: 1rem;
-	/* -webkit-text-stroke-width: 0.5px; */
-	letter-spacing: 1px;
+    /* -webkit-text-stroke-width: 0.5px; */
+    letter-spacing: 1px;
   }
   @media ${device.tablet960} {
     font-size: 1.2rem;
   }
   @media ${device.lap1024} {
     font-size: 1.3rem;
-	/* -webkit-text-stroke-width: 0.8px; */
+    /* -webkit-text-stroke-width: 0.8px; */
   }
   @media ${device.lap1280} {
     font-size: 1.7rem;
-	margin-top: 1rem;
+    margin-top: 1rem;
   }
   @media ${device.lap1440} {
     font-size: 2rem;
-	margin-top: 1rem;
-	/* -webkit-text-stroke-width: 1.2px; */
+    margin-top: 1rem;
+    /* -webkit-text-stroke-width: 1.2px; */
   }
   @media ${device.lap1600} {
     font-size: 2.3rem;
   }
   @media ${device.lap1920} {
     font-size: 2.3rem;
-	/* -webkit-text-stroke-width: 1.5px; */
+    /* -webkit-text-stroke-width: 1.5px; */
   }
 `;
