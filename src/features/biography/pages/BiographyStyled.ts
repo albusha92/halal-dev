@@ -56,10 +56,13 @@ export const Name = styled.div`
   color: ${colors.primary};
   font-weight: bold;
   -webkit-text-stroke-width: 0.1px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
   @media ${device.tablet768} {
     font-size: 0.8rem;
+  }
+  @media ${device.lap1024} {
+    font-size: 1rem;
   }
   @media ${device.lap1440} {
     font-size: 1rem;
@@ -68,7 +71,7 @@ export const Name = styled.div`
 
 export const Position = styled.div`
   @media ${device.mobileS} {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
   @media ${device.tablet768} {
     font-size: 0.6rem;
@@ -80,8 +83,11 @@ export const Position = styled.div`
 
 export const DetailBio = styled.div`
   margin-top: 1rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   @media ${device.tablet768} {
     font-size: 0.7rem;
+  }
+  @media ${device.lap1024} {
+    font-size: 1rem;
   }
 `;

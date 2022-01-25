@@ -2,7 +2,7 @@ import { Col, Row } from 'antd';
 import * as React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useHistory } from 'react-router';
-import founder1 from '../../../../assets/founders/founder1.png';
+import founder1 from 'assets/founders/founder1.png';
 import SvgEnvelop from '../../../../icon-component/Envelop';
 import SvgFacebook from '../../../../icon-component/Facebook';
 import SvgPinterest from '../../../../icon-component/Pinterest';

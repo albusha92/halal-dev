@@ -1,12 +1,15 @@
 import * as React from 'react';
+import { BookOuline, DiamondHandOutline, GroupPeopleOutline, MoutainFlagOutline } from 'uikit/icon-component';
 import FounderMedia from '../../../meet-our-founders/views/media/FounderMedia';
 import Character from '../character/Character';
 import History from '../history/History';
 import Media from '../media/Media';
 import TheNumber from '../number/TheNumber';
 import Press from '../press/Press';
-import { CharacterContainer, Container, Desctiption, TabContainer, TabContentContainer, Title } from './AboutInfoStyled';
+import { CharacterContainer, Container, Desctiption, MisstionContainer, TabContainer, TabContentContainer, TabHeaderContainer, Title } from './AboutInfoStyled';
 import TabButton from './TabButton';
+import Founders from './Founders';
+import mission from 'assets/about/mission-vision.png';
 
 interface IAboutInforProps {
 }
@@ -15,6 +18,7 @@ interface tabModel {
 	name: string;
 	value: string;
 	render: any;
+	icon: any;
 }
 
 const CoreValues = () => {
@@ -60,26 +64,40 @@ const OurStory = () => {
 	)
 }
 
+const MissonVision = () => {
+	return (
+		<Container>
+			<MisstionContainer>
+				<img width={"100%"} alt='' src={mission} />
+			</MisstionContainer>
+		</Container>
+	)
+}
+
 const tabs: tabModel[] = [
 	{
 		name: "Our story",
 		value: 'our-story',
 		render: <OurStory />,
+		icon: <BookOuline />,
+	},
+	{
+		name: "Mission & vision",
+		value: 'mission-vision',
+		render: <MissonVision />,
+		icon: <MoutainFlagOutline />,
 	},
 	{
 		name: "Core values",
 		value: 'core-values',
 		render: <CoreValues />,
+		icon: <DiamondHandOutline />,
 	},
 	{
-		name: "Mission & vision",
-		value: 'mission-vision',
-		render: null,
-	},
-	{
-		name: "Leadership",
-		value: 'leadership',
-		render: null,
+		name: "Founders",
+		value: 'founders',
+		render: <Founders />,
+		icon: <GroupPeopleOutline />,
 	},
 ]
 
@@ -89,14 +107,14 @@ const AboutInfor: React.FunctionComponent<IAboutInforProps> = (props) => {
 	const [currentTab, setCurrentTab] = React.useState<tabModel>(tabs[0]);
 	return (
 		<React.Fragment>
-			<Container id="our-story">
+			<TabHeaderContainer id="our-story">
 				<TabContainer>
 					{tabs.map(tab => {
-						return <TabButton key={tab.value} focus={currentTab.value === tab.value} onClick={() => setCurrentTab(tab)} name={tab.name} />
+						return <TabButton key={tab.value} icon={tab.icon} focus={currentTab.value === tab.value} onClick={() => setCurrentTab(tab)} name={tab.name} />
 					})}
 				</TabContainer>
 
-			</Container>
+			</TabHeaderContainer>
 			<TabContentContainer>
 				{currentTab.render}
 			</TabContentContainer>

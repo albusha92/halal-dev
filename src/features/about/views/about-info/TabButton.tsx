@@ -4,13 +4,14 @@ import { TabContainer } from './TabButtonStyled';
 interface ITabButtonProps {
 	name: string;
 	onClick: () => void;
-	focus: boolean
+	focus: boolean;
+	icon?: any;
 }
 
-const TabButton: React.FunctionComponent<ITabButtonProps> = ({name, onClick, focus}) => {
+const TabButton: React.FunctionComponent<ITabButtonProps> = ({ name, onClick, focus, icon }) => {
 	return (
-		<TabContainer className={focus ? "focus": ""} onClick={onClick}>
-			{name}
+		<TabContainer className={focus ? "focus" : ""} onClick={onClick}>
+			<div className='icon'>{icon}</div> {name}
 		</TabContainer>
 	);
 };
