@@ -101,8 +101,10 @@ export const Title = styled.div`
 `;
 
 export const Desctiption = styled.div`
-  font-weight: bold;
-  text-align: center;
+  font-weight: 500;
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
   color: ${colors.darkGrey};
   & span {
     color: ${colors.primary};

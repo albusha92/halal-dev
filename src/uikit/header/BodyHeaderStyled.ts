@@ -281,8 +281,7 @@ export const SocialItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 0.5rem;
-  cursor: pointer;
+  padding: 0.5rem 0.5rem;
   border-bottom: 0.5px solid ${colors.lightGrey};
 `;
 
@@ -290,5 +289,10 @@ export const SocialName = styled.div`
   font-size: 0.7rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 0.5rem;
+
+  &:hover{
+	  color: ${colors.primary}
+  }
 `;

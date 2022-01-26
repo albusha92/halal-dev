@@ -64,7 +64,7 @@ const History: React.FunctionComponent<IHistoryProps> = (props) => {
 				History
 			</HistoryTitle>
 			<DetailText>
-				Since launching in 2009, Farmart has empowered over 11,000 small scale-farmers across worldwide. We are committed to expanding our reach in order to continue to empower local farmers, positively impact their lives and their families while boosting food production and sustainability.
+				<b>Good Food, Good Life.</b> This is our founding ethos. Since 2020, our Halal products online have enriched the lives of the countless customers we’ve served. With a global vision backed by humble local beginnings, we aim to provide every nation with authentic, nutritious halal products.
 			</DetailText>
 			{tablet768 ? <HistoryProgress>
 				<HistoryItem>

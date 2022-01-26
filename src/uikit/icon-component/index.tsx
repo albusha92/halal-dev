@@ -1,3 +1,4 @@
+export { default as UserErrorOutline } from "./UserErrorOutline";
 export { default as BookOuline } from "./BookOuline";
 export { default as DiamondHandOutline } from "./DiamondHandOutline";
 export { default as GroupPeopleOutline } from "./GroupPeopleOutline";
