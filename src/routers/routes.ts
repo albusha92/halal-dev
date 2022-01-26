@@ -35,7 +35,13 @@ const routes: IRoute[] = [
   },
   {
     component: AboutUs,
-    path: "/about-go-halal",
+    path: "/about-us",
+    exact: true,
+  },
+  
+  {
+    component: AboutUs,
+    path: "/about-us/:type",
     exact: true,
   },
   {

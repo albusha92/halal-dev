@@ -34,6 +34,10 @@ export const HistoryContainer = styled.div`
   }
 `;
 
+export const PressContainer = styled(HistoryContainer)`
+	margin-bottom: 0;
+`;
+
 export const HistoryTitle = styled.div`
   font-weight: bold;
   width: 100%;
@@ -53,8 +57,26 @@ export const DetailText = styled.div`
   @media ${device.mobileS} {
     font-size: 0.7rem;
   }
+  @media ${device.lap1024} {
+    font-size: 1rem;
+  }
   @media ${device.lap1440} {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+`;
+
+export const MediaPressSaid = styled.div`
+  width: 85%;
+  margin: 0 auto;
+  font-weight: bold;
+  & span{
+	  font-weight: 400;
+  }
+  @media ${device.mobileS} {
+    font-size: 0.7rem;
+  }
+  @media ${device.lap1024} {
+    font-size: 0.9rem;
   }
 `;
 

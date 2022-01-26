@@ -48,10 +48,10 @@ const FounderMedia: React.FunctionComponent<IFounderMediaProps> = (props) => {
 			<VideoContainer>
 				<SvgPlayRound style={{cursor: "pointer"}} fontSize="2rem" />
 			</VideoContainer>
-			<OurStoryContainer>
+			{/* <OurStoryContainer>
 
 				{'Our story >>'}
-			</OurStoryContainer>
+			</OurStoryContainer> */}
 		</FounderMediaContainer>
 	);
 };

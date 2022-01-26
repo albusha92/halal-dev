@@ -57,6 +57,9 @@ export const CharacterTitle = styled.div`
   @media ${device.mobileS} {
     font-size: 0.7rem;
   }
+  @media ${device.lap1024} {
+    font-size: 0.9rem;
+  }
   @media ${device.lap1280} {
     font-size: 1rem;
   }
@@ -64,20 +67,20 @@ export const CharacterTitle = styled.div`
 
 export const CharacterContent = styled.div`
   @media ${device.mobileS} {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   @media ${device.lap1024} {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   @media ${device.lap1280} {
     font-size: 0.8rem;
   }
   @media ${device.lap1440} {
-    font-size: 0.7rem;
-	width: 80%;
+    font-size: 1rem;
+	width: 100%;
   }
   @media ${device.lap1920} {
-    font-size: 0.7rem;
-	width: 75%;
+    font-size: 1rem;
+	width: 100%;
   }
 `;

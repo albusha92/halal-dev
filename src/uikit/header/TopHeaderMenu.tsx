@@ -1,11 +1,11 @@
-import { Select } from 'antd';
+import { Dropdown, Select } from 'antd';
+import user from 'assets/svg-icon/user.svg';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
 import { useHistory } from 'react-router';
 import message from '../../assets/svg-icon/message.svg';
 import suitcase from '../../assets/svg-icon/suitcase.svg';
-import user from '../../assets/svg-icon/user.svg';
 import { colors } from '../../config/constants';
 import { update_language } from '../../features/home-page/slices/homeSlice';
 import { TopMenuItem } from '../../schema/general';
@@ -17,6 +17,7 @@ import SvgTurkeyFlag from '../icon-component/TurkeyFlag';
 import SvgUkFlag from '../icon-component/UkFlag';
 import SVGIcon from '../SVGIcon/SVGIcon';
 import VrLine from '../VrLIne';
+import AboutUsDropdown from './AboutUsDropdown';
 import { MenuItem, TopHeaderMenuContainer } from './HeaderStyled';
 import './TopHeaderMenu.css';
 const { Option } = Select;
@@ -25,11 +26,6 @@ interface ITopHeaderMenuProps {
 }
 
 const topMenus: TopMenuItem[] = [
-	{
-		name: "About us",
-		icon: user,
-		link: "/about-go-halal"
-	},
 	{
 		name: "FAQ",
 		icon: message,
@@ -72,8 +68,19 @@ const TopHeaderMenu: React.FunctionComponent<ITopHeaderMenuProps> = (props) => {
 	const dispatch = useDispatch();
 	const { language } = useSelector((state: RootState) => state.home);
 	const history = useHistory();
+
+	const [visibleAboutUs, setVisibleAboutUs] = React.useState<boolean>(false);
+	const handleVisibleChange = flag => {
+		setVisibleAboutUs(flag);
+	};
+
 	return (
 		<TopHeaderMenuContainer>
+			<Dropdown trigger={["click"]} onVisibleChange={handleVisibleChange} visible={visibleAboutUs} overlay={<AboutUsDropdown handleVisibleChange={handleVisibleChange} />} placement="bottomLeft" arrow>
+				<MenuItem>
+					<SVGIcon src={user} size={lap1600 ? 20 : lap1440 ? 15 : lap1024 ? 15 : 15} /> <span>About Us</span>
+				</MenuItem>
+			</Dropdown>
 			{topMenus.map((item, idx) => {
 				return (
 					<React.Fragment key={idx}>
