@@ -1,13 +1,14 @@
+import $ from 'jquery';
 import * as React from 'react';
 import { Term } from 'schema/model';
-import { ArrowDown, ChevronDown } from 'uikit/icon-component';
+import { ChevronDown } from 'uikit/icon-component';
 import { CircleIcon, FaqItemArrownContainer, FaqItemContainer, FaqItemContent, FaqItemContentContaner, FaqItemTitle } from './FaqItemStyled';
-import $ from 'jquery';
 interface IFaqItemProps {
 	item: Term
 }
 
 const createIdFromTitle = (title: string) => {
+	title = title.toLocaleLowerCase().replaceAll("/", "");
 	return title.toLowerCase().replaceAll(" ", "-");
 }
 
