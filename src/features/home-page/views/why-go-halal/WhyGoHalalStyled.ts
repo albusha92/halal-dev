@@ -32,7 +32,6 @@ export const WhyContainer = styled(HeaderPaddingStyled)`
 
 export const WhyTextConatiner = styled.div`
   font-weight: bold;
-  /* font-family: "Neutraface 2 Display Titling"; */
   text-transform: uppercase;
   color: ${colors.primary};
   @media ${device.mobileS} {
